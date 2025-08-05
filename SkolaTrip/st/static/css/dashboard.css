@@ -70,7 +70,7 @@
     margin-top: 20px;
     display: flex;
     gap: 20px;
-    justify-items: center;
+    justify-content: space-between;
 }
 
 .function_div {
