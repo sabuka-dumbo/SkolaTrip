@@ -246,7 +246,7 @@
 }
 
 .accordion-body {
-    background-color: #fafafa;
+    background-color: rgb(228, 220, 220);
     font-size: 0.95rem;
     line-height: 1.5;
     padding: 16px 20px;
