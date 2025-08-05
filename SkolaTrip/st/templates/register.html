@@ -15,36 +15,40 @@ Register
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
-    <form class="form-cont">
-        <div class="login-cont">
-            <h4>სახელი (კლასის ლიდერის)</h4>
-            <input id="name"></input>
-
-            <h4>ტელეფონის ნომერი</h4>
-            <div class="reg-numb">
-                <input id="num" class="reg-numbers">
-                <input id="numb" class="number"></input>
+    <div class="page-wrapper">
+        <form class="form-cont">
+            <div class="login-cont">
+                <h2>SkolaTrip რეგისტრაცია</h2>
+                
+                <h4>სახელი (კლასის ლიდერის)</h4>
+                <input id="name" />
+    
+                <h4>ტელეფონის ნომერი</h4>
+                <div class="reg-numb">
+                    <input id="num" class="reg-numbers" />
+                    <input id="numb" class="number" />
+                </div>
+    
+                <h4>ელ-ფოსტა</h4>
+                <input id="email" />
+    
+                <h4>პაროლი</h4>
+                <input id="pass" />
+    
+                <h4>კლასის დასახელება</h4>
+                <input id="class-name" />
+    
+                <h4>მოსწავლეების რაოდენობა</h4>
+                <input type="number" />
+    
+                <button class="register-btn">დარეგისტრირდი</button>
+                <p>უკვე გაქვს ანგარიში? <a href="login.html">შედი აქ</a></p>
             </div>
-            
-
-            <h4>ელ-ფოსტა</h4>
-            <input id="email"></input> 
-
-            <h4>პაროლი</h4>
-            <input id="pass"></input>
-
-            <h4>კლასის დასახელება (მაგ: ბათუმის მე-10 საჯარო სკოლა 9ა კლასი)</h4>
-            <input id="class-name"></input>
-
-            <h4>მოსწავლეების რაოდენობა</h4>
-            <input type="number"></input>
-            
-            <button class="register-btn">დარეგისტრირდი</button>
-            <p>უკვე გაქვს ანგარიში? <a href="login.html">შედი აქ</p>
-            
-        </div>
-      
-      </form>
+        </form>
+    
+        <img src="{% static 'pics/school_trip.jpg' %}" alt="SkolaTrip" class="register-image" />
+    </div>
+    
       
 
     <script src="{% static 'js/register.js' %}"></script>

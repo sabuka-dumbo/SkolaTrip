@@ -81,6 +81,31 @@
                 </div>
             </div>
         </div>
+
+        <h1 class="title1">ძველი ექსკურსიები:</h1>
+
+        <table class="table1">
+            <tr>
+                <th class="title2">თარიღი</th>
+                <th class="title2">გამგზავრების ადგილი</th>
+                <th class="title2">სტატუსი</th>
+            </tr>
+
+            {% if 1 == 1 %}
+                <tr>
+                    <th class="title3">2024/8/05</th>
+                    <th class="title3">სვანეთი, მესტია</th>
+                    <th class="title3">მომავალში</th>
+                    <th><button class="button2">დეტალები</button></th>
+                </tr>
+            {% else %}
+                <tr>
+                    <th></th>
+                    <th class="title3">თქვენ არ გაქვთ მგზავრობა დაგეგმილი ჯერ</th>
+                    <th></th>
+                </tr>
+            {% endif %}
+        </table>
     </div>
 
     <script src="{% static 'js/dashboard.js' %}"></script>

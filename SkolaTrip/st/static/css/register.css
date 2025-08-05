@@ -2,9 +2,19 @@ body {
     font-family: 'Noto Sans Georgian', sans-serif;
 }
 
+/* Wrapper for form and image side by side */
+.page-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+/* Your original form styles */
 .form-cont {
     display: flex;
     justify-content: flex-end;
+    flex: 1;
 }
 
 input {
@@ -35,13 +45,28 @@ input {
     border-radius: 2px;
 }
 
+/* ✅ Image styling for desktop */
+.register-image {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-left: 40px;
+}
+
 /* ===================== */
 /* ✅ Responsive Styles  */
 /* ===================== */
 @media screen and (max-width: 600px) {
+    .page-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
     .form-cont {
         justify-content: center;
-        padding: 20px;
+        padding: 0;
     }
 
     input {
@@ -51,6 +76,7 @@ input {
     .reg-numb {
         display: flex;
         gap: 5px;
+        flex-direction: column;
     }
 
     .reg-numbers,
@@ -60,5 +86,10 @@ input {
 
     .register-btn {
         width: 100% !important;
+    }
+
+    /* 👇 This hides the image on phones */
+    .register-image {
+        display: none;
     }
 }
