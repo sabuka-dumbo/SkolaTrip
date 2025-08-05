@@ -22,3 +22,7 @@ input{
     height: 30px;
     border-radius: 2px;
 }
+
+h2{
+    display:block;
+}
