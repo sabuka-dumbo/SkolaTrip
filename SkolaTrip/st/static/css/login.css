@@ -1,3 +1,8 @@
+body {
+    font-family: 'Noto Sans Georgian', sans-serif;
+}
+
+
 .form-cont{
     display:flex;
     justify-content: flex-end;
@@ -5,8 +10,8 @@
 
 input{
     width: 600px;
-    height: 30px;
-    border: 1px solid black;
+    height: 35px;
+    border: none;
     background-color: #D9D9D9;
     margin: 5px;
     border-radius: 2px;

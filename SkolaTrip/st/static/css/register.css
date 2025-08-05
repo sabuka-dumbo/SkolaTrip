@@ -1,3 +1,7 @@
+body {
+    font-family: 'Noto Sans Georgian', sans-serif;
+}
+
 .form-cont {
     display: flex;
     justify-content: flex-end;
@@ -46,7 +50,6 @@ input {
 
     .reg-numb {
         display: flex;
-        width: 20px;
         gap: 5px;
     }
 

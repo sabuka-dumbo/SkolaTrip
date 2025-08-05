@@ -5,6 +5,7 @@
 {% block head %}
     <!-- აქ ვწერთ რაც იწერება head ტეგში -->
     <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
 {% endblock %}
 
     <!-- ამის შიგნით ვწერთ რაც იწერება title ტეგში -->
@@ -15,9 +16,8 @@ Login
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
 
-    
+    <img src="{% static 'pics/schooltrip.jpg'%}" alt="">
     <form class="form-cont">
-       
         <div class="login-cont">
             <h2>SkolaTrip შესვლა</h2>
             <h4>ელ-ფოსტა</h4>
