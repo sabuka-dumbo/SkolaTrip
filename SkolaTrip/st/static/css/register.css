@@ -46,7 +46,7 @@ input {
 
     .reg-numb {
         display: flex;
-        
+        width: 20px;
         gap: 5px;
     }
 
