@@ -6,6 +6,8 @@
     display:flex;
     flex-direction: column;
     font-family: Sylfaen;
+    margin: 18px;
+    margin-top: 40px;
 }
 
 #header-div-text h1{
@@ -15,4 +17,15 @@
 
 #header-div-text p{
     font-size: 1.1rem;
+}
+
+#header-div-text button{
+    width: 170px;
+    height: 48px;
+    border-radius: 5px;
+    background: #00A2FF;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor:pointer
 }

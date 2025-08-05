@@ -14,15 +14,29 @@ Login
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
-     <h2>SkolaTrip</h2>
-      <button class="sign-up-btn">Sign Up</button>
-      <button class="lang-btn">Geo</button>
       <form class="form-cont">
         <div class="login-cont">
             <h4>Name (Class Leader)</h4>
             <input id="name"></input>
+
             <h4>Phone Number</h4>
-            <div class="reg-numb"><input id="num"></div>
+            <div class="reg-numb">
+                <input id="num" class="reg-numbers">
+                <input id="numb" class="number"></input>
+            </div>
+            
+
+            <h4>Email</h4>
+            <input id="email"></input> 
+
+            <h4>Password</h4>
+            <input id="pass"></input>
+
+            <h4>Class Name</h4>
+            <input id="class-name"></input>
+
+            <h4>Students amount</h4>
+            <input type="number"></input>
         </div>
       </form>
     <script src="{% static 'js/login.js' %}"></script>
