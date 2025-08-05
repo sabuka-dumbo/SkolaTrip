@@ -51,17 +51,19 @@
 
 #steps-section {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 90px auto;
     padding: 0 20px;
     font-family: Sylfaen, sans-serif;
+    text-align: center; 
 }
 
 #steps-section h2 {
     font-size: 1.4rem;
     margin-bottom: 25px;
     font-weight: bold;
-    text-align: left;
+    text-align: center;
 }
+
 
 .step {
     display: flex;
@@ -149,5 +151,60 @@
 
     #header-div img {
         width: 250px;
+    }
+}
+
+@media (min-width: 1400px) {
+    #header-div-text h1 {
+        font-size: 2.8rem;
+    }
+
+    #header-div-text p {
+        font-size: 1.3rem;
+    }
+
+    #header-div-text button {
+        width: 200px;
+        height: 54px;
+        font-size: 1.2rem;
+    }
+
+    #header-div img {
+        width: 500px;
+    }
+
+    #steps-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .step p {
+        font-size: 1.1rem;
+    }
+
+    .circle {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1399px) {
+    #header-div-text h1 {
+        font-size: 2.2rem;
+    }
+
+    #header-div-text p {
+        font-size: 1.15rem;
+    }
+
+    #header-div-text button {
+        width: 180px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    #header-div img {
+        width: 420px;
     }
 }

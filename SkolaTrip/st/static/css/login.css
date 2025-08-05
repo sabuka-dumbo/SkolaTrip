@@ -12,7 +12,7 @@ input{
     border-radius: 2px;
 }
 
-.register-btn{
+.login-btn{
     display: block;
     margin: 5px;
     width: 100%;
@@ -24,5 +24,9 @@ input{
 }
 
 h2{
-   
+   display:block;
+}
+
+.login-btn{
+    display:block;
 }
