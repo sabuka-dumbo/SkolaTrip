@@ -90,24 +90,7 @@
     line-height: 1.4;
 }
 
-@media (max-width: 600px) {
-    #steps-section h2 {
-        text-align: center;
-    }
 
-    .step {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-
-    .circle {
-        margin-right: 12px;
-    }
-
-    .step p {
-        font-size: 0.95rem;
-    }
-}
 
 
 /* responsive */
@@ -137,6 +120,25 @@
 
     #header-div img {
         width: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    #steps-section h2 {
+        text-align: center;
+    }
+
+    .step {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .circle {
+        margin-right: 12px;
+    }
+
+    .step p {
+        font-size: 0.95rem;
     }
 }
 
