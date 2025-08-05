@@ -203,7 +203,9 @@
   color: #333;
 }
 
-
+.accordion-item{
+    width: 800px;
+}
 
 
 

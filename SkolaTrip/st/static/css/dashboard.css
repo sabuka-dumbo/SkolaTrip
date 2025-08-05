@@ -205,3 +205,14 @@
         margin-top: 8px;
     }
 }
+
+
+@media (max-width: 430px) {
+    .functions_div {
+        grid-template-columns: 1fr; /* one per row */
+    }
+
+    .function_div:last-child {
+        grid-column: auto; /* reset */
+    }
+}
