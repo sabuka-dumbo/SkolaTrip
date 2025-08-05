@@ -5,11 +5,12 @@
 #header-div-text{
     display:flex;
     flex-direction: column;
+    font-family: Sylfaen;
 }
 
 #header-div-text h1{
     font-size: 2rem;
-    font-family: Sylfaen;
+    margin-bottom: 0.1rem;
 }
 
 #header-div-text p{
