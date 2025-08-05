@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block head %}
+    <!-- აქ ვწერთ რაც იწერება head ტეგში -->
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+    <!-- ამის შიგნით ვწერთ რაც იწერება title ტეგში -->
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+    <!-- აქ ვწერთ რაც იწერება body ტეგში -->
+    <div class="contact">
+    </div>
+            
+    <script src="{% static 'js/contact.js' %}"></script>
+{% endblock %}
