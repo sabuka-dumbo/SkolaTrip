@@ -46,4 +46,17 @@
 
 .button2 {
     position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    background-color: #00A2FF;
+    border-radius: 15px;
+    color: white;
+    font-size: 15px;
+    font-family: "Itim";
+    font-weight: bold;
 }

@@ -12,14 +12,6 @@ input{
     border-radius: 2px;
 }
 
-.reg-numbers{
-    width: 50px;
-}
-
-.number{
-    width: 530px;
-}
-
 .register-btn{
     display: block;
     margin: 5px;
