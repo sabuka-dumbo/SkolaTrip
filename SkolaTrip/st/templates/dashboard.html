@@ -24,12 +24,20 @@
                 <th class="title2">სტატუსი</th>
             </tr>
 
-            <tr>
-                <th class="title3">თარიღი</th>
-                <th class="title3">გამგზავრების ადგილი</th>
-                <th class="title3">სტატუსი</th>
-                <th><button>დეტალები</button></th>
-            </tr>
+            {% if 1 == 1 %}
+                <tr>
+                    <th class="title3">თარიღი</th>
+                    <th class="title3">გამგზავრების ადგილი</th>
+                    <th class="title3">სტატუსი</th>
+                    <th><button class="button2">დეტალები</button></th>
+                </tr>
+            {% else %}
+                <tr>
+                    <th></th>
+                    <th class="title3">თქვენ არ გაქვთ მგზავრობა დაგეგმილი ჯერ</th>
+                    <th></th>
+                </tr>
+            {% endif %}
         </table>
     </div>
 

@@ -49,6 +49,12 @@
     max-width: 100%;
 }
 
+#guide-div{
+    display:flex;
+    flex-direction: column;
+}
+
+/* responsive */
 @media (max-width: 768px) {
     #header-div {
         flex-direction: column;
