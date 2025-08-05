@@ -15,39 +15,44 @@ Register
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
-    <div class="page-wrapper">
+    <div class="register-wrapper">
+        <!-- Left side image -->
+        <div class="register-image">
+            <img src="{% static 'pics/school_trip.jpg' %}" alt="School Trip">
+        </div>
+    
+        <!-- Right side form -->
         <form class="form-cont">
             <div class="login-cont">
                 <h2>SkolaTrip რეგისტრაცია</h2>
-                
-                <h4>სახელი (კლასის ლიდერის)</h4>
-                <input id="name" />
     
-                <h4>ტელეფონის ნომერი</h4>
+                <label>სრული სახელი (კლასის ლიდერის)</label>
+                <input type="text">
+    
+                <label>ტელეფონის ნომერი</label>
                 <div class="reg-numb">
-                    <input id="num" class="reg-numbers" />
-                    <input id="numb" class="number" />
+                    <input class="reg-numbers" value="+995" readonly>
+                    <input class="number" type="text">
                 </div>
     
-                <h4>ელ-ფოსტა</h4>
-                <input id="email" />
+                <label>ელ-ფოსტა</label>
+                <input type="email">
     
-                <h4>პაროლი</h4>
-                <input id="pass" />
+                <label>პაროლი</label>
+                <input type="password">
     
-                <h4>კლასის დასახელება</h4>
-                <input id="class-name" />
+                <label>კლასის დასახელება</label>
+                <input type="text" placeholder="მაგ: ვაკის №42 საჯარო სკოლა მე-9ა კლასი">
     
-                <h4>მოსწავლეების რაოდენობა</h4>
-                <input type="number" />
+                <label>მოსწავლეების რაოდენობა</label>
+                <input type="number">
     
-                <button class="register-btn">დარეგისტრირდი</button>
-                <p>უკვე გაქვს ანგარიში? <a href="login.html">შედი აქ</a></p>
+                <button class="register-btn">დარეგისტრირდი ახლავე</button>
+                <p>უკვე გაქვს ანგარიში? <a href="login.html">დარეგისტრირდი აქ</p>
             </div>
         </form>
-    
-        <img src="{% static 'pics/school_trip.jpg' %}" alt="SkolaTrip" class="register-image" />
     </div>
+    
     
       
 

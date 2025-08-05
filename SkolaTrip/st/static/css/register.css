@@ -1,95 +1,105 @@
 body {
     font-family: 'Noto Sans Georgian', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Wrapper for form and image side by side */
-.page-wrapper {
+/* Wrapper for side-by-side layout */
+.register-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 40px;
+    min-height: 100vh;
 }
 
-/* Your original form styles */
-.form-cont {
-    display: flex;
-    justify-content: flex-end;
+/* Left image panel */
+.register-image {
     flex: 1;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+.register-image img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Right form panel */
+.form-cont {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.login-cont {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Input fields */
 input {
-    width: 600px;
+    width: 100%;
     height: 35px;
     border: none;
     background-color: #D9D9D9;
-    margin: 5px;
+    margin: 5px 0;
     border-radius: 2px;
+    padding: 0 10px;
+}
+
+.reg-numb {
+    display: flex;
+    gap: 10px;
 }
 
 .reg-numbers {
-    width: 50px;
+    width: 80px;
+    background-color: #D9D9D9;
 }
 
 .number {
-    width: 530px;
+    flex: 1;
 }
 
+/* Register button */
 .register-btn {
     display: block;
-    margin: 5px;
+    margin-top: 15px;
     width: 100%;
     background-color: #000000;
     color: white;
     cursor: pointer;
-    height: 30px;
+    height: 35px;
     border-radius: 2px;
-}
-
-/* ✅ Image styling for desktop */
-.register-image {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-left: 40px;
+    font-size: 16px;
 }
 
 /* ===================== */
 /* ✅ Responsive Styles  */
 /* ===================== */
-@media screen and (max-width: 600px) {
-    .page-wrapper {
+@media screen and (max-width: 768px) {
+    .register-wrapper {
         flex-direction: column;
-        align-items: center;
-        padding: 20px;
+    }
+
+    .register-image {
+        display: none;
     }
 
     .form-cont {
-        justify-content: center;
-        padding: 0;
-    }
-
-    input {
-        width: 100% !important;
+        padding: 20px;
     }
 
     .reg-numb {
-        display: flex;
-        gap: 5px;
         flex-direction: column;
     }
 
     .reg-numbers,
     .number {
-        width: 100% !important;
-    }
-
-    .register-btn {
-        width: 100% !important;
-    }
-
-    /* 👇 This hides the image on phones */
-    .register-image {
-        display: none;
+        width: 100%;
     }
 }

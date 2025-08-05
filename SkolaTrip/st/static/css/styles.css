@@ -244,7 +244,9 @@
   margin-bottom: 10px;
 }
 
-.accordion-c
+.accordion-collapse{
+ margin-bottom: 40px;   
+}
 
 
 
