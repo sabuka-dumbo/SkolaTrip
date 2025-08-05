@@ -24,4 +24,9 @@ input{
     display: block;
     margin: 5px;
     width: 100%;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    height: 30px;
+    border-radius: 2px;
 }
