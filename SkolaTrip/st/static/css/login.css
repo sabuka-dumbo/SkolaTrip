@@ -1,14 +1,15 @@
+/* Set font */
 body {
     font-family: 'Noto Sans Georgian', sans-serif;
 }
 
-
-.form-cont{
-    display:flex;
+/* Your original styles */
+.form-cont {
+    display: flex;
     justify-content: flex-end;
 }
 
-input{
+input {
     width: 600px;
     height: 35px;
     border: none;
@@ -17,7 +18,7 @@ input{
     border-radius: 2px;
 }
 
-.login-btn{
+.login-btn {
     display: block;
     margin: 5px;
     width: 100%;
@@ -28,10 +29,34 @@ input{
     border-radius: 2px;
 }
 
-h2{
-   display:block;
+h2 {
+    display: block;
 }
 
-.login-btn{
-    display:block;
+/* ============================= */
+/* ✅ Responsive styles for mobile */
+/* ============================= */
+@media screen and (max-width: 600px) {
+    .form-cont {
+        justify-content: center;
+        padding: 20px;
+    }
+
+    input {
+        width: 100% !important;
+    }
+
+    .login-btn {
+        width: 100% !important;
+    }
+
+    .form-cont {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-image {
+        display: none;
+    }
+
 }
