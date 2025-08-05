@@ -5,7 +5,6 @@
 #header-div-text{
     display:flex;
     flex-direction: column;
-    line-height: 10;
 }
 
 #header-div-text h1{
