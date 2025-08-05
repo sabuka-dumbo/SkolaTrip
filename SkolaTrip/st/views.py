@@ -9,5 +9,9 @@ def login(request):
 
 def register(request):
     return render(request, "register.html")
+
 def dashboard(request):
     return render(request, "dashboard.html")
+
+def services(request):
+    return render(request, "services.html")
