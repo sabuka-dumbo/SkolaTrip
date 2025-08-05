@@ -8,6 +8,10 @@
 }
 
 #header-div-text h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: Sylfaen;
+}
+
+#header-div-text p{
+    font-size: 1.1rem;
 }
