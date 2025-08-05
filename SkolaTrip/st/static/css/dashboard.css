@@ -137,5 +137,22 @@
 }
 
 @media screen and (max-width: 780px) {
+        .functions_div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .function_div {
+        width: calc((100% - 40px));
+    }
+
+    .function_div:last-child {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (max-width: 700px) {
     
 }

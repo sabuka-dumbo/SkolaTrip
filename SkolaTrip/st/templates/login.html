@@ -16,19 +16,29 @@ Login
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
 
-    <img src="{% static 'pics/school_trip.jpg'%}" alt="" class="login-image">
-    <form class="form-cont">
-        <div class="login-cont">
-            <h2>SkolaTrip შესვლა</h2>
-            <h4>ელ-ფოსტა</h4>
-            <input id="name"></input>
-
-            <h4>პაროლი</h4>
-            <input id="num">
-
-            <button class="login-btn">შესვლა</button>
-            <p>არ გაქვს ანგარიში? <a href="register.html">დარეგისტრირდი აქ</p>
+    <div class="login-wrapper">
+        <!-- Left side image -->
+        <div class="login-image">
+            <img src="{% static 'pics/school_trip.jpg' %}" alt="School Trip">
         </div>
+    
+        <!-- Right side login form -->
+        <form class="form-cont">
+            <div class="login-cont">
+                <h2>SkolaTrip შესვლა</h2>
+    
+                <label>ელ-ფოსტა</label>
+                <input type="email">
+    
+                <label>პაროლი</label>
+                <input type="password">
+    
+                <button class="login-btn">შესვლა</button>
+                <p>არ გაქვს ანგარიში? <a href="{% url 'register' %}">დარეგისტრირდი აქ</a></p>
+            </div>
+        </form>
+    </div>
+    
                
             
       
