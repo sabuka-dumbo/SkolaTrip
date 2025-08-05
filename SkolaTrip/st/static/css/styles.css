@@ -1,4 +1,8 @@
 #header-div{
     display:flex;
-    
 } 
+
+#header-div-text{
+    display:flex;
+    flex-direction: column;
+}
