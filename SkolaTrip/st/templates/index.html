@@ -1,173 +1,194 @@
 {% extends 'layout.html' %}
 {% load static %}
 
-
 {% block head %}
-    <!-- აქ ვწერთ რაც იწერება head ტეგში -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 {% endblock %}
 
-    <!-- ამის შიგნით ვწერთ რაც იწერება title ტეგში -->
 {% block title %}
-    index
+    მთავარი
 {% endblock %}
 
 {% block body %}
-    <!-- აქ ვწერთ რაც იწერება body ტეგში -->
      <div id="header-div">
         <div id="header-div-text">
             <h1>დაგეგმე შენი კლასის ექსკურსია მარტივად!</h1>
-            <p>აირჩიე თარიღი და ადგილი — ჩვენ მოვუძებნით <br> სასტუმროს, ტრანსპორტს და აქტივობებს, რომ  <br> ბავშვებმა დაუვიწყარი დღე გაატარონ.</p>
+            <p>აირჩიე თარიღი და ადგილი — ჩვენ მოვუძებნით სასტუმროს, ტრანსპორტს და აქტივობებს</p>
             <button>დაიწყე დაგეგმვა</button>
         </div> 
-        <img src="{% static 'pics/logo.png' %}" alt="">
+        <img src="{% static 'pics/logo.png' %}" alt="ექსკურსიის ლოგო">
      </div>
 
      <section id="steps-section">
-        <h2>ყველაფერი 3 ნაბიჯში მიმდინარეობს</h2>
+        <h2>ყველაფერი 3 ნაბიჯში</h2>
         <div class="step">
             <div class="circle">1</div>
             <p><strong>რეგისტრაცია</strong> — შეიყვანე კლასის პროფილი</p>
         </div>
         <div class="step">
             <div class="circle">2</div>
-            <p><strong>გემის შერჩევა</strong> — მიუთითე თარიღი, ადგილი და ბიუჯეტი</p></div>
-            <div class="step">
-                <div class="circle">3</div>
-                <p><strong>შეთავაზებების მიღება</strong> — ნახავ სასტუმროებს, ტრანსპორტსა და აქტივობებს</p>
-            </div>
-            <div class="step">
-                <div class="circle">4</div>
-                <p><strong>დაკონკრეტება</strong> — აირიე ვარიანტი და დაგვიკავშირდი მომწოდებელთან პირდაპირ</p>
-            </div>
-        </section>
+            <p><strong>გემის შერჩევა</strong> — მიუთითე თარიღი, ადგილი და ბიუჯეტი</p>
+        </div>
+        <div class="step">
+            <div class="circle">3</div>
+            <p><strong>შეთავაზებების მიღება</strong> — ნახავ სასტუმროებს, ტრანსპორტსა და აქტივობებს</p>
+        </div>
+        <div class="step">
+            <div class="circle">4</div>
+            <p><strong>დაკონკრეტება</strong> — აირჩიე ვარიანტი და დაგვიკავშირდი</p>
+        </div>
+    </section>
         
-        <section id="offer-section">
-    <div class="offer-left">
-        <h2>რატომ ჩვენ?</h2>
-        <ul>
-            <li><span class="dot"></span> ყველა საჭირო სერვისი ერთ საიტზე</li>
-            <li><span class="dot"></span> დროისა და ენერგიის დაზოგვა</li>
-            <li><span class="dot"></span> სანდო ტრანსპორტის და სასტუმროს ვარიანტები</li>
-            <li><span class="dot"></span> მარტივი შედარება ფასებისა და პირობების</li>
-            <li><span class="dot"></span>PDF ანგარიში კლასის ხელმძღვანელისთვის</li>
-        </ul>
-    </div>
-    <div class="offer-right">
-        <h3>საოჯახო სასტუმრო იელის შესახებ</h3>
-        <div class="hotel-top">
-            <div id="star">
-            <p>საოჯახო სასტუმრო იელი</p>
-            <p><strong>⭐️⭐️⭐️⭐️⭐️</strong></p>
-            <p>250 ლარი დღეში</p>
+    <section id="offer-section">
+        <div class="offer-left">
+            <h2>რატომ ჩვენ?</h2>
+            <ul>
+                <li><span class="dot"></span> ყველა საჭირო სერვისი ერთ საიტზე</li>
+                <li><span class="dot"></span> დროისა და ენერგიის დაზოგვა</li>
+                <li><span class="dot"></span> სანდო ტრანსპორტის და სასტუმროს ვარიანტები</li>
+                <li><span class="dot"></span> მარტივი შედარება ფასებისა და პირობების</li>
+                <li><span class="dot"></span>PDF ანგარიში კლასის ხელმძღვანელისთვის</li>
+            </ul>
         </div>
-        <div class="hotel-image-placeholder"></div>
-    </div>
-        <div class="hotel-info">
-            <p>🏨 2 ღამის განთავსება</p>
-            <p>🚌 ტრანსპორტი შესულია</p>
-            <p>🍽️ 3-ჯერადი კვება</p>
+        <div class="benefits-image">
+                <div class="offer-card">
+                    <div class="offer-header">
+                        <h3>TOP შეთავაზება</h3>
+                        <span class="badge bg-success">პოპულარული</span>
+                    </div>
+                    <div class="offer-body">
+                        <h4>საოჯახო სასტუმრო "იელი"</h4>
+                        <div class="rating">
+                          <p>⭐⭐⭐⭐⭐</p>
+                            <span>5.0 (128 მიმოხილვა)</span>
+                        </div>
+                        <div class="price">250 ₾ <small>დღეში</small></div>
+                        <ul class="offer-features">
+                            <li><i class="fas fa-bed"></i> 2 ღამის განთავსება</li>
+                            <li><i class="fas fa-bus"></i> ტრანსპორტი შედის</li>
+                            <li><i class="fas fa-utensils"></i> 3-ჯერადი კვება</li>
+                            <li><i class="fas fa-map-marked-alt"></i> ექსკურსიები შედის</li>
+                        </ul>
+                        <button class="btn btn-primary w-100">დეტალების ნახვა</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="offer-button">დაიწყე დაგეგმვა</button>
-    </div>
     </section>
 
-   <section id="faq-sec">
-  <h2>FAQ</h2>
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.</div>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
-    </div>
-  </div>
-
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-    </div>
-  </div>
-
-    <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-        Accordion Item #4
-      </button>
-    </h2>
-    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-    </div>
-  </div>
-
-    <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-        Accordion Item #5
-      </button>
-    </h2>
-    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-    </div>
-  </div>
-
-    <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-        Accordion Item #6
-      </button>
-    </h2>
-    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-    </div>
-  </div>
-
-    <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
-        Accordion Item #7
-      </button>
-    </h2>
-    <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-    </div>
-  </div>
-
-    <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
-        Accordion Item #8
-      </button>
-    </h2>
-    <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-    </div>
-  </div>
-</div>
-</section>
-
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <h2 class="section-title">ხშირად დასმული კითხვები</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            როგორ ხდება გადახდა?
+                        </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            გადახდა შესაძლებელია ონლაინ (ბარათით), ბანკის გადარიცხვით ან ნაღდი ფულით ჩვენს ოფისში. გთავაზობთ გადახდის განვადებას 3 თვეზე უპროცენტოდ.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            რა არის გაუქმების პირობები?
+                        </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            გაუქმება შესაძლებელია ექსკურსიამდე 14 დღით ადრე ჯარიმის გარეშე. 7-14 დღის ვადაში - 30% ჯარიმა, 7 დღემდე - 50% ჯარიმა. გაუქმებისას დაბრუნება ხდება 3 სამუშაო დღის განმავლობაში.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            როგორ ვიყიდო დამატებითი აქტივობები?
+                        </button>
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            დამატებითი აქტივობების შეძენა შეგიძლიათ პირდაპირ საიტზე თქვენი პროფილიდან, ან ჩვენი კონსულტანტის მეშვეობით ტელეფონზე. ყველა აქტივობა ხელმისაწვდომია როგორც წინასწარ, ასევე ექსკურსიის დროს.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            არის თუ არა დაზღვევა შედის ფასში?
+                        </button>
+                    </h3>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            დიახ, ყველა ჩვენი ტური მოიცავს სავალდებულო სამოგზაურო დაზღვევას, რომელიც მოიცავს სამედიცინო ხარჯებს, ავარიებს და ბაგაჟის დაზიანებას. დამატებითი დაზღვევის შეძენაც შესაძლებელია.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            რა დოკუმენტებია საჭირო?
+                        </button>
+                    </h3>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            მოსწავლეებისთვის საჭიროა პირადობის მოწმობის ასლი, დაბადების მოწმობა და სკოლის ცნობა. მასწავლებლებისთვის - პირადობის მოწმობა და სამსახურიდან ცნობა. ჩვენ დავეხმარებით ყველა საჭირო დოკუმენტის მომზადებაში.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                            როგორ ხდება ტრანსპორტირება?
+                        </button>
+                    </h3>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            ვიყენებთ მხოლოდ ლიცენზირებულ ტრანსპორტს მოწინავე უსაფრთხოების სისტემებით. ყველა ავტობუსი აღჭურვილია სავაჭრო ქამრებით, GPS-ით და აქვს მგზავრების ავარიის დაზღვევა. მარშრუტის მონიტორინგი ხელმისაწვდომია ონლაინ.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                            რა არის მინიმალური და მაქსიმალური ჯგუფის ზომა?
+                        </button>
+                    </h3>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            მინიმალური ჯგუფი - 10 პირი, მაქსიმალური - 50 პირი ერთ ჯგუფში. დიდი ჯგუფებისთვის ვთავაზობთ დამატებით ფასდაკლებებს და ინდივიდუალურ პროგრამებს.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                            რა პერიოდში შეიძლება ექსკურსიის დაგეგმვა?
+                        </button>
+                    </h3>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            ექსკურსიების დაგეგმვა შესაძლებელია წლის ნებისმიერ დროს. რეკომენდებული პერიოდებია: სექტემბერი-ოქტომბერი და აპრილი-ივნისი. ზამთარში გთავაზობთ სპეციალურ ზამთრის პროგრამებს.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="{% static 'js/index.js' %}"></script>
     <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
