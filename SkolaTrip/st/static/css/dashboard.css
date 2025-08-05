@@ -1,0 +1,33 @@
+.mainpart {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: max-content;
+    margin: 20px;
+}
+
+.title1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    font-family: "Itim";
+    font-weight: bold;
+    color: black;
+}
+
+.table1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-top: 20px;
+}

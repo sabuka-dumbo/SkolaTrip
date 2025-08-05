@@ -16,28 +16,33 @@ Login
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
       <form class="form-cont">
         <div class="login-cont">
-            <h4>Name (Class Leader)</h4>
+            <h4>სახელი (კლასის ლიდერის)</h4>
             <input id="name"></input>
 
-            <h4>Phone Number</h4>
+            <h4>ტელეფონის ნომერი</h4>
             <div class="reg-numb">
                 <input id="num" class="reg-numbers">
                 <input id="numb" class="number"></input>
             </div>
             
 
-            <h4>Email</h4>
+            <h4>ელ-ფოსტა</h4>
             <input id="email"></input> 
 
-            <h4>Password</h4>
+            <h4>პაროლი</h4>
             <input id="pass"></input>
 
-            <h4>Class Name</h4>
+            <h4>კლასის დასახელება (მაგ: ბათუმის მე-10 საჯარო სკოლა 9ა კლასი)</h4>
             <input id="class-name"></input>
 
-            <h4>Students amount</h4>
+            <h4>მოსწავლეების რაოდენობა</h4>
             <input type="number"></input>
+            
+            <button class="register-btn">დარეგისტრირდი</button>
+            
         </div>
+      
       </form>
+      
     <script src="{% static 'js/login.js' %}"></script>
 {% endblock %}
