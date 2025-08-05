@@ -1,0 +1,44 @@
+.service {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: max-content;
+}
+
+.service-title1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    font-family: "Itim";
+    font-weight: bold;
+    color: black;
+}
+
+.service-title2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-family: "Itim";
+    font-weight: normal;
+    color: black;
+}
+
+.service-image {
+    position: relative;
+    top: 0;
+    left: calc(100% - 400px);
+    width: 400px;
+    height: 250px;
+    background-color: aqua;
+}
