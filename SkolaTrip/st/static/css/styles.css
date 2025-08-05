@@ -221,9 +221,9 @@
   padding: 16px 20px;
   background-color: #00A2FF !important;
   color: white !important;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 8px;
+  border: none;
   transition: background-color 0.3s ease;
+  border-radius: 12px;
 }
 
 .accordion-button:hover {
@@ -241,12 +241,10 @@
   padding: 16px 20px;
   color: #333;
   border-radius: 0 0 12px 12px;
-  margin-bottom: 10px;
 }
 
-.accordion-collapse{
- margin-top: -25px;   
-}
+/* წავშალე .accordion-collapse margin-top */
+
 
 
 

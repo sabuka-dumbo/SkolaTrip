@@ -156,3 +156,48 @@
 @media screen and (max-width: 700px) {
     
 }
+
+@media (max-width: 700px) {
+    .table1 {
+        display: block;
+        border: none;
+    }
+
+    .table1 tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid gray;
+        border-radius: 15px;
+        padding: 10px;
+        background: #fff;
+    }
+
+    .table1 th {
+        display: block;
+        text-align: left;
+        font-size: 14px;
+        padding: 5px 0;
+    }
+
+    /* Hide the header row */
+    .table1 tr:first-child {
+        display: none;
+    }
+
+    /* Add labels before values */
+    .table1 tr:nth-child(n+2) th:nth-child(1)::before {
+        content: "თარიღი: ";
+        font-weight: normal;
+        color: gray;
+    }
+    .table1 tr:nth-child(n+2) th:nth-child(2)::before {
+        content: "გამგზავრების ადგილი: ";
+        font-weight: normal;
+        color: gray;
+    }
+    .table1 tr:nth-child(n+2) th:nth-child(3)::before {
+        content: "სტატუსი: ";
+        font-weight: normal;
+        color: gray;
+    }
+}

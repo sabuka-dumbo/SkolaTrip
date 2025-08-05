@@ -4,35 +4,31 @@ body {
     padding: 0;
 }
 
-/* Wrapper for side-by-side layout */
-.login-wrapper {
+.page-wrapper {
     display: flex;
     min-height: 100vh;
 }
 
-/* Left image panel */
-.login-image {
+/* Left-side image */
+.side-image {
     flex: 1;
-    background-color: #e0e0e0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
 }
 
-.login-image img {
+.side-image img {
     width: 100%;
     height: 100vh;
     object-fit: cover;
 }
 
-/* Right form panel */
+/* Form on the right */
 .form-cont {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .login-cont {
@@ -68,11 +64,11 @@ input {
 /* ✅ Responsive Styles  */
 /* ===================== */
 @media screen and (max-width: 768px) {
-    .login-wrapper {
+    .page-wrapper {
         flex-direction: column;
     }
 
-    .login-image {
+    .side-image {
         display: none;
     }
 
