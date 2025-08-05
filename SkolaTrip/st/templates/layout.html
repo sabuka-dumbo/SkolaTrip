@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        {% block head %}{% endblock %}
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar">
+            <h1 class="navbar-title">SkolaTrip</h1>
+
+            <div class="navbar-div1" id="menu">
+                <button class="navbar-button1">Sign up</button>
+                <button class="navbar-button2">Geo
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down navbar-dropdown" viewBox="0 0 16 16">
+                        <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="navbar-div2" id="burgermenu">
+                <span class="span" id="span1"></span>
+                <span class="span" id="span2"></span>
+                <span class="span" id="span3"></span>
+            </div>
+        </nav>
+
+        {% block body %}
+        {% endblock %}
+
+        <div class="contact-us"></div>
+        <script src="{% static 'js/layout.js' %}"></script>
+    </body>
+</html>
