@@ -214,15 +214,16 @@
     font-family: Sylfaen, sans-serif;
     font-weight: bold;
 }
-
 .accordion {
     width: 80%;
     border-radius: 12px;
     background-color: transparent;
+    margin: 0 auto;
 }
 
 .accordion-item {
     border: none;
+    background-color: transparent;
 }
 
 .accordion-button {
@@ -232,10 +233,12 @@
     padding: 18px 20px;
     border-bottom: 1px solid #ddd;
     transition: background-color 0.3s ease;
+    background-color: #00A2FF !important;  
+    color: white !important;
 }
 
 .accordion-button:hover {
-    background-color: #e3e3e3;
+    background-color: #e04343; 
 }
 
 .accordion-button:focus {
@@ -243,13 +246,15 @@
 }
 
 .accordion-body {
-    background-color: #fff;
+    background-color: #fafafa;
     font-size: 0.95rem;
     line-height: 1.5;
     padding: 16px 20px;
     color: #333;
     border-bottom: 1px solid #ddd;
 }
+
+
 
 
 
