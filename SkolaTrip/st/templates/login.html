@@ -15,6 +15,13 @@ Login
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
+    {% if messages %}
+        <div id="message-box">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
 
     <div class="page-wrapper">
         <!-- Image on the left (hidden on small screens) -->
