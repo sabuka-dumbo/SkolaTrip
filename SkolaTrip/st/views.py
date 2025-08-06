@@ -15,3 +15,6 @@ def dashboard(request):
 
 def services(request):
     return render(request, "services.html")
+
+def blog(request):
+    return render(request, "blogs.html")
