@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Scroll to top after 2 seconds
         setTimeout(() => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: -10, behavior: "smooth" });
         }, 2000);
 
         // Hide after 4 seconds
