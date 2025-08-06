@@ -1,20 +1,54 @@
-/* საერთო სტილი */
 body {
-    font-family: sans-serif;
+    font-family: 'Noto Sans Georgian', sans-serif;;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    width: 500px;
-    height: 480px;
-    margin: 20px auto;
+.container{
+    width: 540px;
+    height: 540px;
+    margin: 30px auto;
     display: flex;
     flex-direction: column;
     border: 1px solid;
     border-radius: 20px;
     box-sizing: border-box; 
     padding-left: 20px;
+    
+}
+
+.register2{
+    width: 540px;
+    height: 450px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 20px;
+    box-sizing: border-box; 
+    padding-left: 20px
+}
+
+.register3 {
+    width: 540px;
+    height: auto !important;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding: 20px;
+}
+
+
+textarea{
+    background:#e5e5e5;
+    resize: none;
+    width: 94%;
+    border: none;
+    height: 120px;
 }
 
 .steps-sec {
@@ -28,7 +62,7 @@ body {
 .step-circle {
     width: 45px;
     height: 45px;
-    background: #D3D3D3 ;
+    background: #87D3FF ;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -82,10 +116,10 @@ input {
     background: #e5e5e5;
     width: 95%;
     height: 45px;
-    border: 1px solid #ccc;
+    border: none;
     font-size: 1rem;
+    border-radius: 2px;
     padding-left: 10px;
-    border-radius: 5px;
     outline: none;
     box-sizing: border-box;
 }
@@ -94,14 +128,34 @@ input::placeholder {
     color: #888;
 }
 
-/* რეზპონსიული სტილი */
+button{
+   width: 95%; 
+   height: 45px;
+   cursor: pointer;
+   border: none;
+   background: #00A2FF;
+   color: white;
+   transition: 0.34s;
+   border-radius: 2px;
+   font-size: 1.1rem;
+   margin-top: 15px;
+}
 
-/* მობილური ეკრანებისთვის */
+button:hover{
+   background: #0395e9;
+}
+
+.fa-solid{
+    transform: translateY(2px);
+}
+
+label{
+    font-size: 16px;
+}
+/* responsive*/
+
 @media (max-width: 600px) {
-    .container {
-        width: 90%;
-        padding: 15px;
-    }
+
 
     h1 {
         font-size: 1.4rem;
@@ -117,9 +171,14 @@ input::placeholder {
     }
 }
 
-/* ტაბლეტების ეკრანებისთვის */
 @media (max-width: 900px) {
+    .container{
+        height: 520px;
+    }
 
+    .register2{
+        height: 460px;
+    }
 
     h1 {
         font-size: 1.4rem;
@@ -134,7 +193,6 @@ input::placeholder {
     }
 }
 
-/* მცირე ეკრანებისათვის (მცირე ტელეფონები) */
 @media (max-width: 590px) {
     .steps-sec {
         flex-direction: column;
@@ -155,75 +213,18 @@ input::placeholder {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 600px) {
-    .steps-sec {
-        gap: 15px;
-    }
-
-    .step-circle {
-        width: 35px;
-        height: 35px;
-    }
-
-    .steps-div p {
-        font-size: 1.1rem;
-        margin-top: 20px;
-    }
-
-    .line {
-        width: 130px;
+@media (max-width:408px){
+    .container,.register2,.register3{
+        height: 530px !important;
     }
 }
 
-@media (max-width: 900px) {
-    .steps-sec {
-        gap: 15px;
-    }
 
-    .step-circle {
-        width: 40px;
-        height: 40px;
-    }
-
-    .steps-div p {
-        font-size: 1.2rem;
-        margin-top: 22px;
-    }
-
-    .line {
-        width: 150px;
-    }
-}
-
-@media (max-width:590px){
-    .steps-sec{
-        flex-direction: column;
-    }
-}
-
-/* Responsive styling */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        padding: 15px;
+@media (max-width: 556px) {
+    .container,.register2,.register3 {
+        width: 90% !important;
+        height: auto !important;
+        padding: 15px !important;
     }
 
     h1 {
@@ -238,29 +239,9 @@ input::placeholder {
     label {
         font-size: 1rem;
     }
-}
 
-@media (max-width: 900px) {
-    .container {
-        width: 90%;
-        padding: 15px;
-    }
 
-    h1 {
-        font-size: 1.4rem;
-    }
 
-    input {
-        height: 42px;
-    }
-
-    label {
-        font-size: 1.1rem;
-    }
-}
-
-/* For smaller screens like mobile */
-@media (max-width: 590px) {
     .steps-sec {
         flex-direction: column;
         gap: 10px;
@@ -280,3 +261,16 @@ input::placeholder {
     }
 }
 
+@media (max-width:455px){
+    h1{
+        text-align: center;
+    }
+    form{
+        justify-content: center;
+        align-items: center;
+    }
+    .container,.register2,.register3{
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
