@@ -33,12 +33,21 @@ Register
     </div>
 </div>
 
-<form>
     <div class="container">
         <h1>სკოლისა და კლასის დეტალები:</h1>
-        <input type="text">
+        <form>
+        <label for="school">სკოლის სახელი</label>
+        <input type="text" id="school">
+        <label for="city">ქალაქი / რაიონი</label>
+        <input type="text" id="city">
+        <label for="class">კლასი (მაგ. 9დ კლასი)</label>
+        <input type="text" id="class">
+        <label for="class">მოსწავლეთა რაოდენობა</label>
+        <input type="text" id="class">
+        <label for="class">სხვა თანხმლები პირების რაოდენობა (მაგ. მშობლები, მასწავლებლები და ასშ)</label>
+        <input type="text" id="class">
+        </form>
     </div>
-</form>
 
     <script src="{% static 'js/classregister.js' %}"></script>
 {% endblock %}
