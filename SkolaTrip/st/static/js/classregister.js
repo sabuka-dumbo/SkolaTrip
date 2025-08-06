@@ -1,61 +1,50 @@
 let container = document.querySelector('.container');
 let register2 = document.querySelector('.register2');
-let form1 = document.querySelector('.container-form');
-let form2 = document.querySelector('.register2-form');
-let input = document.getElementsByTagName('input');
 let register3 = document.querySelector('.register3');
-let stepCircle = document.getElementById('step-circle1');
+
+let stepCircle1 = document.getElementById('step-circle1');
 let stepCircle2 = document.getElementById('step-circle2');
 let stepCircle3 = document.getElementById('step-circle3');
 
+let btn1 = document.getElementById('submit');
+let btn2 = register2.querySelector('button[type="button"]');
+let btn3 = document.getElementById('last-btn');
+
+// Load saved progress
 window.addEventListener('load', () => {
-    let form1Completed = localStorage.getItem('form1Completed');
-    let form2Completed = localStorage.getItem('form2Completed');
+    let step = localStorage.getItem('currentStep') || '1';
 
-    if (form1Completed === 'true') {
-        container.style.display = 'none';
-        register2.style.display = 'block';
-        stepCircle.style.background = '#00A2FF';
-    }
-
-    if (form2Completed === 'true') {
-        register2.style.display = 'none';
-        register3.style.display = 'block';
-        stepCircle2.style.background = '#00A2FF';
-        stepCircle3.style.background = '#00A2FF';
-    }
-
-    else {
-        container.style.display = 'block';
-        register2.style.display = 'none';
-        register3.style.display = 'none';
+    if (step === '1') {
+        showStep(1);
+    } else if (step === '2') {
+        showStep(2);
+    } else if (step === '3') {
+        showStep(3);
     }
 });
 
-function handleCheck(){
-    if(form1){
-        form1.addEventListener('submit', function(e){
-            e.preventDefault();
-            container.style.display = 'none';
-            register2.style.display = 'block';
-            stepCircle.style.background = '#00A2FF';
-            localStorage.setItem('form1Completed', 'true');
-        });
-    }
+function showStep(step) {
+    container.style.display = step === 1 ? 'block' : 'none';
+    register2.style.display = step === 2 ? 'block' : 'none';
+    register3.style.display = step === 3 ? 'block' : 'none';
+
+    stepCircle1.style.background = step >= 1 ? '#00A2FF' : '';
+    stepCircle2.style.background = step >= 2 ? '#00A2FF' : '';
+    stepCircle3.style.background = step >= 3 ? '#00A2FF' : '';
+
+    localStorage.setItem('currentStep', step.toString());
 }
 
-function handleCheck2(){
-    if(form2){
-        form2.addEventListener('submit', function(e){
-            e.preventDefault();
-            register2.style.display = 'none';
-            register3.style.display = 'block';
-            stepCircle2.style.background = '#00A2FF';
-            stepCircle3.style.background = '#00A2FF';
-            localStorage.setItem('form2Completed', 'true');
-        });
-    }
-}
+btn1.addEventListener('click', (e) => {
+    e.preventDefault();
+    showStep(2);
+});
 
-handleCheck();
-handleCheck2();
+btn2.addEventListener('click', (e) => {
+    e.preventDefault();
+    showStep(3);
+});
+
+btn3.addEventListener('click', () => {
+    localStorage.removeItem('currentStep');
+});
