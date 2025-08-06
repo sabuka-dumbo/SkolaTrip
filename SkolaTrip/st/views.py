@@ -18,3 +18,6 @@ def services(request):
 
 def blog(request):
     return render(request, "blogs.html")
+
+def classregister(request):
+    return render(request, "classregister.html")
