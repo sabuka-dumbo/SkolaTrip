@@ -1,5 +1,9 @@
-.steps-div{
+body{
+    font-family:  sans-serif;
+}
+.steps-sec{
     display: flex;
+    justify-content: center;
 }
 
 .step-circle{
@@ -7,4 +11,12 @@
     height: 45px;
     background: #00a2ff;
     border-radius: 30px;
+}
+
+.steps-div p{
+    font-size: 1.3rem;
+}
+
+.steps-div{
+    display: flex;
 }

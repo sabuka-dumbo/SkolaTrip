@@ -79,6 +79,23 @@ input {
     font-size: 16px;
 }
 
+#message-box {
+    position: fixed;
+    top: -80px;
+    left: 0;
+    right: 0;
+    background: #ff4d4d; /* red for errors */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+    transition: top 0.5s ease-in-out;
+    z-index: 9999;
+}
+#message-box.show {
+    top: 0;
+}
+
 /* ===================== */
 /* ✅ Responsive Styles  */
 /* ===================== */

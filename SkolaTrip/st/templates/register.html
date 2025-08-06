@@ -15,6 +15,14 @@ Register
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
+    {% if messages %}
+        <div id="message-box">
+            {% for message in messages %}
+                <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+    {% endif %}
+
     <div class="register-wrapper">
         <!-- Left side image -->
         <div class="register-image">
@@ -22,7 +30,7 @@ Register
         </div>
     
         <!-- Right side form -->
-        <form class="form-cont" action="{% url 'register' %}" method="post">
+    <form class="form-cont" action="{% url 'register' %}" method="post">
     {% csrf_token %}
     <div class="login-cont">
         <h2>SkolaTrip რეგისტრაცია</h2>

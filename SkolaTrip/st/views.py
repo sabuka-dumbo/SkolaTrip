@@ -49,7 +49,7 @@ def register_view(request):
 
         login(request, user)
         messages.success(request, "რეგისტრაცია წარმატებით დასრულდა!")
-        return redirect("home")  # replace with your actual homepage url name
+        return redirect("index")  # replace with your actual homepage url name
 
     return render(request, "register.html")
 
