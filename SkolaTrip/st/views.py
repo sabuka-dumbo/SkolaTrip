@@ -24,33 +24,30 @@ def login_view(request):
             messages.error(request, "მომხმარებლის სახელი ან პაროლი არასწორია.")
 
     return render(request, "login.html")
+
 def register_view(request):
     if request.method == "POST":
         full_name = request.POST.get("full_name")
         phone_number = request.POST.get("phone_number")
         email = request.POST.get("email")
-        username = request.POST.get("username")
         password1 = request.POST.get("password1")
         password2 = request.POST.get("password2")
         class_name = request.POST.get("class_name")
         student_count = request.POST.get("student_count")
 
-        # ✅ validation
+        # ✅ check if passwords match
         if password1 != password2:
             messages.error(request, "პაროლები არ ემთხვევა.")
             return render(request, "register.html")
 
-        if User.objects.filter(username=username).exists():
-            messages.error(request, "ეს მომხმარებლის სახელი უკვე გამოყენებულია.")
-            return render(request, "register.html")
-
+        # ✅ check if email already exists
         if User.objects.filter(email=email).exists():
             messages.error(request, "ეს ელ-ფოსტა უკვე გამოყენებულია.")
             return render(request, "register.html")
 
-        # ✅ create user
+        # ✅ create user (username = email)
         user = User.objects.create(
-            username=username,
+            username=email,  # username is set to email
             email=email,
             full_name=full_name,
             phone_number=phone_number,
@@ -61,9 +58,10 @@ def register_view(request):
 
         login(request, user)
         messages.success(request, "რეგისტრაცია წარმატებით დასრულდა!")
-        return redirect("index")  # replace with your actual homepage url name
+        return redirect("index")  # change to your home URL name
 
     return render(request, "register.html")
+
 
 def dashboard(request):
     return render(request, "dashboard.html")
