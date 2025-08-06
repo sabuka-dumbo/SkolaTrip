@@ -76,17 +76,10 @@ WSGI_APPLICATION = 'SkolaTrip.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'skolatrip',
-        'USER': 'skolatrip_user',
-        'PASSWORD': 'B9hB3qltYd2b0yHZ3hWg3jAlNyJcI3Zb',
-        'HOST': 'dpg-d29ln3ali9vc73fstssg-a',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-import dj_database_url
-
-DATABASES['default'] = dj_database_url.parse("postgresql://skolatrip_user:B9hB3qltYd2b0yHZ3hWg3jAlNyJcI3Zb@dpg-d29ln3ali9vc73fstssg-a.frankfurt-postgres.render.com/skolatrip")
 
 
 # Password validation
