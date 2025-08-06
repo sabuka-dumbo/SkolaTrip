@@ -57,7 +57,12 @@ body {
     margin: auto;
     border-radius: 20px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
 
+h1{
+    font-size: 1.5rem;
 }
 
 /* responsive */
