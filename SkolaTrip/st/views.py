@@ -11,7 +11,7 @@ def index(request):
 
 def login_view(request):
     if request.method == "POST":
-        username = request.POST.get("username")
+        username = request.POST.get("username")  # this is actually email
         password = request.POST.get("password")
 
         user = authenticate(request, username=username, password=password)
@@ -19,7 +19,7 @@ def login_view(request):
         if user is not None:
             login(request, user)
             messages.success(request, "შესვლა წარმატებულია!")
-            return redirect("index")  # change "home" to your home page URL name
+            return redirect("index")  # replace with your homepage URL
         else:
             messages.error(request, "მომხმარებლის სახელი ან პაროლი არასწორია.")
 

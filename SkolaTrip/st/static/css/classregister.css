@@ -52,7 +52,11 @@ body {
 
 .container{
     width: 500px;
-    height: ;
+    height: 450px;
+    border: 1px solid;
+    margin: auto;
+    border-radius: 20px;
+    margin-top: 20px;
 
 }
 
