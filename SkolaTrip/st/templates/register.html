@@ -23,34 +23,42 @@ Register
     
         <!-- Right side form -->
         <form class="form-cont" action="{% url 'register' %}" method="post">
-            <div class="login-cont">
-                <h2>SkolaTrip რეგისტრაცია</h2>
-    
-                <label>სრული სახელი (კლასის ლიდერის)</label>
-                <input type="text">
-    
-                <label>ტელეფონის ნომერი</label>
-                <div class="reg-numb">
-                    <input class="reg-numbers" value="+995" readonly>
-                    <input class="number" type="text">
-                </div>
-    
-                <label>ელ-ფოსტა</label>
-                <input type="email">
-    
-                <label>პაროლი</label>
-                <input type="password">
-    
-                <label>კლასის დასახელება</label>
-                <input type="text">
-    
-                <label>მოსწავლეების რაოდენობა</label>
-                <input type="number">
-    
-                <button class="register-btn">დარეგისტრირდი ახლავე</button>
-                <p>უკვე გაქვს ანგარიში? <a href="{% url 'login' %}">შედი აქ</p>
-            </div>
-        </form>
+    {% csrf_token %}
+    <div class="login-cont">
+        <h2>SkolaTrip რეგისტრაცია</h2>
+
+        <label>სრული სახელი (კლასის ლიდერის)</label>
+        <input type="text" name="full_name" required>
+
+        <label>ტელეფონის ნომერი</label>
+        <div class="reg-numb">
+            <input class="reg-numbers" value="+995" readonly>
+            <input class="number" type="text" name="phone_number" required>
+        </div>
+
+        <label>ელ-ფოსტა</label>
+        <input type="email" name="email" required>
+
+        <label>მომხმარებლის სახელი</label>
+        <input type="text" name="username" required>
+
+        <label>პაროლი</label>
+        <input type="password" name="password1" required>
+
+        <label>გაიმეორე პაროლი</label>
+        <input type="password" name="password2" required>
+
+        <label>კლასის დასახელება</label>
+        <input type="text" name="class_name" required>
+
+        <label>მოსწავლეების რაოდენობა</label>
+        <input type="number" name="student_count" required>
+
+        <button type="submit" class="register-btn">დარეგისტრირდი ახლავე</button>
+        <p>უკვე გაქვს ანგარიში? <a href="{% url 'login' %}">შედი აქ</a></p>
+    </div>
+</form>
+
     </div>
 
     <script src="{% static 'js/register.js' %}"></script>
