@@ -9,10 +9,10 @@ from django.contrib.auth.hashers import make_password
 def index(request):
     return render(request, "index.html")
 
-def login(request):
+def login_view(request):
     return render(request, "login.html")
 
-def register(request):
+def register_view(request):
     if request.method == "POST":
         full_name = request.POST.get("full_name")
         phone_number = request.POST.get("phone_number")
