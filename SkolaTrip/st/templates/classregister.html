@@ -1,7 +1,9 @@
 {% extends 'layout.html' %}
 {% load static %}
 
+
 {% block head %}
+    <!-- აქ ვწერთ რაც იწერება head ტეგში -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/classregister.css' %}">
@@ -9,84 +11,89 @@
     <script src="https://kit.fontawesome.com/06532b8c54.js" crossorigin="anonymous"></script>
 {% endblock %}
 
+    <!-- ამის შიგნით ვწერთ რაც იწერება title ტეგში -->
 {% block title %}
 Register
 {% endblock %}
 
 {% block body %}
-    <form action="{% url 'classregister' %}" method="post">
-        {% csrf_token %}
-        <div class="steps-sec">
-            <div class="steps-div">
-                <div class="step-circle" id="step-circle1"></div>
-                <p>Part 1</p>
-                <div class="line"></div>
-            </div>
-            <div class="steps-div">
-                <div class="step-circle" id="step-circle2"></div>
-                <p>Part 2</p>
-                <div class="line"></div>
-            </div>
-            <div class="steps-div">
-                <div class="step-circle" id="step-circle3"></div>
-                <p>Part 3</p>
-            </div>
-        </div>
+    <!-- აქ ვწერთ რაც იწერება body ტეგში -->
+<form action="{% url 'classregister' %}" method="post">
+    {% csrf_token %}
 
-        <div class="container">
-            <h1>სკოლისა და კლასის დეტალები:</h1>
-            <label for="school">სკოლის სახელი</label>
-            <input type="text" id="school" name="school" required>
+     <div class="steps-sec">
+    <div class="steps-div">
+        <div class="step-circle" id="step-circle1"></div>
+        <p>Part 1</p>
+        <div class="line"></div>
+    </div>
+    
+    <div class="steps-div">
+        <div class="step-circle" id="step-circle2"></div>
+        <p>Part 2</p>
+        <div class="line"></div>
+    </div>
 
-            <label for="city">ქალაქი / რაიონი</label>
-            <input type="text" id="city" name="city" required>
+    <div class="steps-div">
+        <div class="step-circle" id="step-circle3"></div>
+        <p>Part 3</p>
+    </div>
+</div>
 
-            <label for="class_name">კლასი (მაგ. 9დ კლასი)</label>
-            <input type="text" id="class_name" name="class" required>
-
-            <label for="pupil_count">მოსწავლეთა რაოდენობა</label>
-            <input type="number" id="pupil_count" name="pupil_count" required>
-
-            <label for="other_people_count">სხვა თანხმლები პირების რაოდენობა</label>
-            <input type="number" id="other_people_count" name="other_people_count" required>
-
-            <button id="submit" type="button">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-
-        <div class="register2" style="display: none;">
-            <h1>ექსკურიის დეტალები:</h1>
-            <label for="date">სასურველი თარიღი</label>
-            <input type="date" id="date" name="excursion_date" required>
-
-            <label for="location">დანიშნულების ადგილი</label>
-            <input type="text" id="location" name="location" required>
-
-            <label for="transport">ტრანსპორტირების ტიპი</label>
-            <input type="text" id="transport" name="transportation" required>
-
-            <label for="duration">ექსკურსის სავარაუდო ხანგრძლივობა</label>
-            <input type="text" id="duration" name="proboble_length" required>
-
-            <button type="button">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
-
-        <div class="register3" style="display: none;">
-            <h1>ბიუჯეტი:</h1>
-            <label for="budget">ბიუჯეტი თითო მოსწავლეზე</label>
-            <input type="number" id="budget" name="budget" min="10" required>
-
-            <label for="food">კვების მოთხოვნები</label>
-            <input type="text" id="food" name="food" required>
-
-            <label for="activities">დამატებითი აქტივობები</label>
-            <input type="text" id="activities" name="activities" required>
-
-            <label for="comment">კომენტარი</label>
-            <textarea id="comment" name="comment"></textarea>
-
-            <button id="last-btn" type="submit">დასრულება <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+    <div class="container">
+        <h1>სკოლისა და კლასის დეტალები:</h1>
+        <form class="container-form">
+        <label for="school">სკოლის სახელი</label>
+        <input type="text" id="school" name="school" required>
+        <label for="city">ქალაქი / რაიონი</label>
+        <input type="text" id="city" name="city" required>
+        <label for="class">კლასი (მაგ. 9დ კლასი)</label>
+        <input type="text" id="class" name="class" required>
+        <label for="class">მოსწავლეთა რაოდენობა</label>
+        <input type="text" id="class" name="pupil_count" required>
+        <label for="other">სხვა თანხმლები პირების რაოდენობა (მაგ. მშობლები, მასწავლებლები და ასშ)</label>
+        <input type="text" id="other" name="other_people_count" required>
+        <button id="submit" type="submit">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
     </form>
+    </div>
+
+     <div class="register2">
+            <h1>ექსკურიის დეტალები:</h1>
+            <form class="register2-form">
+                <label for="date">სასურველი თარიღი</label>
+                <input type="date" id="date" name="excursion_date" required>
+                <label for="location">დანიშნულების ადგილი</label>
+                <input type="text" id="location" name="location" required>
+                <label for="transport">ტრანსპორტირების ტიპი</label>
+                <input type="text" id="transport" name="transportation" required>
+                <label for="duration">ექსკურსიი სავარაუდო ხანგრძლივობა</label>
+                <input type="text" id="duration" name="proboble_length" required>
+                <button type="submit">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
+            </form>
+            </div>
+
+    <div class="register3">
+    <h1>ბიუჯეტი:</h1>
+    <form class="register3-form">
+        <label for="budget">ბიუჯეტი თითო მოსწავლეზე</label>
+        <input type="number" id="budget" name="budget" min="10" required>
+        
+        <label for="food">კვების მოთხოვნები</label>
+        <input type="text" id="food" class="food" required>
+        
+        <label for="activities">დამატებითი აქტივობები</label>
+        <input type="text" id="activities" class="activities" required>
+        
+        <label for="comment">კომენტარი</label>
+        <textarea id="comment" name="comment"></textarea>        
+        <button id="last-btn" type="submit">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+
+</div>
+
+</form>
+
+
 
     <script src="{% static 'js/classregister.js' %}"></script>
 {% endblock %}
