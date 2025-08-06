@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from .models import User
 from django.contrib.auth.hashers import make_password
 
@@ -10,8 +10,20 @@ def index(request):
     return render(request, "index.html")
 
 def login_view(request):
-    return render(request, "login.html")
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
 
+        user = authenticate(request, username=username, password=password)
+
+        if user is not None:
+            login(request, user)
+            messages.success(request, "შესვლა წარმატებულია!")
+            return redirect("index")  # change "home" to your home page URL name
+        else:
+            messages.error(request, "მომხმარებლის სახელი ან პაროლი არასწორია.")
+
+    return render(request, "login.html")
 def register_view(request):
     if request.method == "POST":
         full_name = request.POST.get("full_name")

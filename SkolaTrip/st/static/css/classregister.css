@@ -1,23 +1,93 @@
-body{
-    font-family:  sans-serif;
-}
-.steps-sec{
-    display: flex;
-    justify-content: center;
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.step-circle{
+.steps-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+.step-circle {
     width: 45px;
     height: 45px;
     background: #00a2ff;
-    border-radius: 30px;
-}
-
-.steps-div p{
-    font-size: 1.3rem;
-}
-
-.steps-div{
+    border-radius: 50%;
     display: flex;
-    gap:10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.step-circle::after {
+    content: '✔';  
+    color: white;
+    font-size: 22px;
+    position: absolute;
+}
+
+.steps-div p {
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.steps-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 170px;
+    height: 3px;
+    background: black;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 600px) {
+    .steps-sec {
+        gap: 15px;
+    }
+
+    .step-circle {
+        width: 35px;
+        height: 35px;
+    }
+
+    .steps-div p {
+        font-size: 1.1rem;
+        margin-top: 20px;
+    }
+
+    .line {
+        width: 130px;
+    }
+}
+
+@media (max-width: 900px) {
+    .steps-sec {
+        gap: 15px;
+    }
+
+    .step-circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .steps-div p {
+        font-size: 1.2rem;
+        margin-top: 22px;
+    }
+
+    .line {
+        width: 150px;
+    }
 }
