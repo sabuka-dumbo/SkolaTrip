@@ -23,7 +23,8 @@ Login
         </div>
     
         <!-- Login form on the right -->
-        <form class="form-cont">
+        <form class="form-cont" action="{% url 'login' %}" method="post">
+            {% csrf_token %}
             <div class="login-cont">
                 <h2>SkolaTrip შესვლა</h2>
     
