@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'SkolaTrip.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb',                # Replace with your Render database name
+        'NAME': 'Skolatrip',                # Replace with your Render database name
         'USER': 'skolatrip_user',              # Replace with your Render username
         'PASSWORD': 'B9hB3qltYd2b0yHZ3hWg3jAlNyJcI3Zb',      # Replace with your Render password
-        'HOST': 'dpg-xxxxxxx.render.com',  # Replace with your Render host
+        'HOST': 'dpg-d29ln3ali9vc73fstssg-a',  # Replace with your Render host
         'PORT': '5432',                # Default Postgres port
     }
 }
