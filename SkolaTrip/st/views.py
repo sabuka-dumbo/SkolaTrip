@@ -7,7 +7,10 @@ from django.contrib.auth.hashers import make_password
 
 # Create your views here.
 def index(request):
-    return render(request, "index.html")
+    if request.user.is_authenticated:
+        return redirect("dashboard")
+    else:
+        return render(request, "index.html")
 
 def login_view(request):
     if request.method == "POST":

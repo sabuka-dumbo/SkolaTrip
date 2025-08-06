@@ -63,7 +63,8 @@ body {
 
 h1{
     font-size: 1.5rem;
-    font-weight: bolder;
+    padding: 10px;
+    padding-left: 20px;
 }
 
 /* responsive */
