@@ -23,19 +23,24 @@ class User(AbstractUser):
         verbose_name="user permissions",
     )
 
-class Excursion(models.Model):
-    school_name = models.CharField(max_length=255, blank=True, null=True)
-    excursion_place = models.CharField(max_length=255, blank=True, null=True)
-    grade = models.CharField(max_length=255, blank=True, null=True)
-    pupil_count = models.PositiveIntegerField(default=0)
-    other_people_count = models.PositiveIntegerField(default=0)
-    excursion_date = models.DateField(blank=True, null=True)
-    destination = models.CharField(max_length=255, blank=True, null=True)
-    transportation = models.CharField(max_length=255, blank=True, null=True)
-    proboble_lenght = models.CharField(max_length=255, blank=True, null=True)
-    budget = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    food = models.CharField(max_length=255, blank=True, null=True)
-    comments = models.TextField(blank=True, null=True)
+from django.db import models
+
+class ExcursionRegistration(models.Model):
+    school_name = models.CharField(max_length=255)
+    city = models.CharField(max_length=255)
+    class_name = models.CharField(max_length=100)
+    pupil_count = models.PositiveIntegerField()
+    other_people_count = models.PositiveIntegerField()
+    excursion_date = models.DateField()
+    location = models.CharField(max_length=255)
+    transportation = models.CharField(max_length=255)
+    probable_length = models.CharField(max_length=100)
+    budget = models.DecimalField(max_digits=10, decimal_places=2)
+    food = models.TextField()
+    activities = models.TextField()
+    comment = models.TextField(blank=True, null=True)
+
+    created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.school_name} - {self.excursion_place} ({self.excursion_date})"
+        return f"{self.school_name} - {self.class_name} excursion on {self.excursion_date}"

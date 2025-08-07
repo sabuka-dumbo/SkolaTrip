@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth import login, authenticate
 from .models import User
 from django.contrib.auth.hashers import make_password
+from .models import *
 
 # Create your views here.
 def index(request):
@@ -85,13 +86,29 @@ def classregister(request):
         excursion_date = request.POST.get("excursion_date")
         location = request.POST.get("location")
         transportation = request.POST.get("transportation")
-        proboble_length = request.POST.get("proboble_length")
+        probable_length = request.POST.get("proboble_length")
         budget = request.POST.get("budget")
         food = request.POST.get("food")
         activities = request.POST.get("activities")
         comment = request.POST.get("comment")
 
-        print(f"Received data: {school_name}, {city}, {class_name}, {pupil_count}, {other_people_count}, {excursion_date}, {location}, {transportation}, {proboble_length}, {budget}, {food}, {activities}, {comment}")
+        # Save to DB
+        registration = ExcursionRegistration.objects.create(
+            school_name=school_name,
+            city=city,
+            class_name=class_name,
+            pupil_count=int(pupil_count),
+            other_people_count=int(other_people_count),
+            excursion_date=excursion_date,
+            location=location,
+            transportation=transportation,
+            probable_length=probable_length,
+            budget=budget,
+            food=food,
+            activities=activities,
+            comment=comment,
+        )
+        registration.save()
 
         return redirect("index")  # replace with your success URL
 
