@@ -51,6 +51,7 @@ class Hotel(models.Model):
     phone_number = models.CharField(max_length=100, blank=True, null=True, default='')
     email = models.EmailField(blank=True, null=True, default='')
     website = models.URLField(blank=True, null=True, default='')
+    price_per_night = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
 
     def __str__(self):
         return self.name
