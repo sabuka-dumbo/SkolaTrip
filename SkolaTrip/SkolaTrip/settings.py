@@ -83,8 +83,8 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'RHlQzsSxgCgCrZZfljIXqreNpCegdiag',
-        'HOST': 'gondola.proxy.rlwy.net',  # ❗ Only the hostname here
-        'PORT': '26323',                   # ❗ Use the port from your connection URL
+        'HOST': 'gondola.proxy.rlwy.net',
+        'PORT': '26323',
     }
 }
 
