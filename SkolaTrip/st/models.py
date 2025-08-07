@@ -52,6 +52,16 @@ class Hotel(models.Model):
     email = models.EmailField(blank=True, null=True, default='')
     website = models.URLField(blank=True, null=True, default='')
     price_per_night = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    pool = models.BooleanField(default=False)
+    parking = models.BooleanField(default=False)
+    wifi = models.BooleanField(default=False)
+    breakfast_included = models.BooleanField(default=False)
+    description = models.TextField(blank=True, null=True, default='')
+    gym = models.BooleanField(default=False)
+    spa = models.BooleanField(default=False)
+    terrace = models.BooleanField(default=False)
+    caffe = models.BooleanField(default=False)
+    restaurant = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
