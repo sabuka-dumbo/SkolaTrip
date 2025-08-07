@@ -14,14 +14,13 @@ let btn1 = document.querySelector('.container-form button');
 let btn2 = document.querySelector('.register2-form button');
 let lastBtn = document.getElementById('last-btn');
 
-// Prevent form submit on Enter key except in textarea
+// Disable Enter submit except in textarea
 document.getElementById('main-form').addEventListener('keydown', function (e) {
     if (e.key === 'Enter' && e.target.tagName.toLowerCase() !== 'textarea') {
         e.preventDefault();
     }
 });
 
-// Validate all inputs inside a step container (div)
 function validateStep(stepContainer) {
     let inputs = stepContainer.querySelectorAll('input, select, textarea');
     for (let input of inputs) {
@@ -64,7 +63,8 @@ btn2.addEventListener('click', function () {
 lastBtn.addEventListener('click', function (e) {
     e.preventDefault();
     if (validateStep(form3)) {
-        // Submit the whole big form by id
-        document.getElementById('main-form').submit();
+        // Use native submit to avoid potential JS overrides
+        const form = document.getElementById('main-form');
+        HTMLFormElement.prototype.submit.call(form);
     }
 });
