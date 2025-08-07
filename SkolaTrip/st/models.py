@@ -44,3 +44,26 @@ class ExcursionRegistration(models.Model):
 
     def __str__(self):
         return f"{self.school_name} - {self.class_name} excursion on {self.excursion_date}"
+
+class Hotel(models.Model):
+    name = models.CharField(max_length=255)
+    address = models.CharField(max_length=255)
+    city = models.CharField(max_length=100)
+    country = models.CharField(max_length=100)
+    phone_number = models.CharField(max_length=100, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
+    website = models.URLField(blank=True, null=True)
+
+    def __str__(self):
+        return self.name
+    
+class Driver_info(models.Model):
+    name = models.CharField(max_length=255)
+    phone_number = models.CharField(max_length=100, blank=True, null=True)
+    vehicle_type = models.CharField(max_length=100, blank=True, null=True)
+    vehicle_plate = models.CharField(max_length=100, blank=True, null=True)
+    vehicle_capacity = models.PositiveIntegerField(default=0)
+    vehicle_color = models.CharField(max_length=100, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.vehicle_type} ({self.vehicle_plate})"
