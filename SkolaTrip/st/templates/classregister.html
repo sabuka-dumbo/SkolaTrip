@@ -18,9 +18,6 @@ Register
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
-<form action="{% url 'classregister' %}" method="post">
-    {% csrf_token %}
-
      <div class="steps-sec">
     <div class="steps-div">
         <div class="step-circle" id="step-circle1"></div>
@@ -53,7 +50,7 @@ Register
         <input type="text" id="class" name="pupil_count" required>
         <label for="other">სხვა თანხმლები პირების რაოდენობა (მაგ. მშობლები, მასწავლებლები და ასშ)</label>
         <input type="text" id="other" name="other_people_count" required>
-        <button id="submit" type="submit">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
+        <button id="submit" type="button">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
     </form>
     </div>
 
@@ -68,7 +65,7 @@ Register
                 <input type="text" id="transport" name="transportation" required>
                 <label for="duration">ექსკურსიი სავარაუდო ხანგრძლივობა</label>
                 <input type="text" id="duration" name="proboble_length" required>
-                <button type="submit">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
+                <button type="button">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
             </form>
             </div>
 
@@ -90,10 +87,6 @@ Register
     </form>
 
 </div>
-
-</form>
-
-
 
     <script src="{% static 'js/classregister.js' %}"></script>
 {% endblock %}

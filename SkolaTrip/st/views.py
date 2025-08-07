@@ -91,26 +91,6 @@ def classregister(request):
         activities = request.POST.get("activities")
         comment = request.POST.get("comment")
 
-        if all([
-            school_name, city, class_name, pupil_count, other_people_count,
-            excursion_date, location, transportation, proboble_length,
-            budget, food, activities, comment
-        ]):
-            print("school_name:", school_name)
-            print("city:", city)
-            print("class_name:", class_name)
-            print("pupil_count:", pupil_count)
-            print("other_people_count:", other_people_count)
-            print("excursion_date:", excursion_date)
-            print("location:", location)
-            print("transportation:", transportation)
-            print("proboble_length:", proboble_length)
-            print("budget:", budget)
-            print("food:", food)
-            print("activities:", activities)
-            print("comment:", comment)
-
-            return redirect("index")
 
     else:
         return render(request, "classregister.html")
