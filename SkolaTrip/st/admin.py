@@ -4,3 +4,5 @@ from .models import *
 # Register your models here.
 admin.site.register(User)
 admin.site.register(ExcursionRegistration)
+admin.site.register(Hotel)
+admin.site.register(Driver_info)
