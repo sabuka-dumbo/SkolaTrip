@@ -5,6 +5,8 @@
 {% block head %}
     <!-- აქ ვწერთ რაც იწერება head ტეგში -->
     <link rel="stylesheet" href="{% static 'css/hotel.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 {% endblock %}
 
     <!-- ამის შიგნით ვწერთ რაც იწერება title ტეგში -->
@@ -14,6 +16,48 @@
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
+     <div class="head-div">
+     <h1>სასტუმროს სახელი</h1>
+     <p>სასტუმროს სლოგანი აქ</p>
+     <img id="main-img">
+     </div>
+<div class="services-section">
+  
+  <div class="card-container">
+    
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="icon" width="60" />
+      <h5>გიდის მომსახურება</h5>
+      <p>პროფესიონალი გიდები, რომლებიც გაგაცნობენ ქვეყანას.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/833/833316.png" alt="icon" width="60" />
+      <h5>ტრანსპორტირება</h5>
+      <p>კომფორტული მიკროავტობუსებითა და მძღოლებით ყველგან იმოგზაურებთ.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="icon" width="60" />
+      <h5>საცხოვრებელი</h5>
+      <p>თანამშრომლობითი სასტუმროები და ოჯახური ტიპის განთავსება.</p>
+    </div>
+  </div>
+</div>
+
+<section class="amenitites">
+    <div class="amenities-card">
+    <h2>Hotel Amenities</h2>
+    <div class="amenities-grid">
+      <div class="amenity"><i class="fas fa-wifi"></i><span>Free Wi-Fi</span></div>
+      <div class="amenity"><i class="fas fa-swimmer"></i><span>Swimming Pool</span></div>
+      <div class="amenity"><i class="fas fa-spa"></i><span>Spa & Wellness</span></div>
+      <div class="amenity"><i class="fas fa-concierge-bell"></i><span>Room Service</span></div>
+      <div class="amenity"><i class="fas fa-shuttle-van"></i><span>Airport Shuttle</span></div>
+      <div class="amenity"><i class="fas fa-paw"></i><span>Pet Friendly</span></div>
+    </div>
+  </div>
+</section>
 
     <script src="{% static 'js/hotel.js' %}"></script>
 {% endblock %}

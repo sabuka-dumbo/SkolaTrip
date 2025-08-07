@@ -3,6 +3,8 @@
 
 {% block head %}
     <link rel="stylesheet" href="{% static 'css/driver.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 {% endblock %}
 
 {% block title %}
@@ -10,5 +12,37 @@
 {% endblock %}
 
 {% block body %}
+<body>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>გამარჯობა! მე ვარ თქვენი სკოლის გზავნის პარტნიორი</h1>
+      <p>და მე შემიძლია მოგაწოდოთ საუკეთესო გამოცდილება</p>
+      <button class="btn">დამიწყე ახლავე</button>
+    </div>
+    <div class="hero-img"></div>
+  </section>
+
+  <section class="features">
+    <div class="feature-card">
+      <i class="fas fa-calendar-check"></i>
+      <h3>მარტივი დაჯავშნა</h3>
+      <p>გადადგი პირველი ნაბიჯი სკოლის საგანმანათლებლო ტურისკენ მარტივად და სწრაფად.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>უსაფრთხო მგზავრობა</h3>
+      <p>ჩვენი პარტნიორი ტრანსპორტის სერვისები უზრუნველყოფენ უსაფრთხო და კომფორტულ მგზავრობას.</p>
+    </div>
+    <div class="feature-card">
+      <i class="fas fa-headset"></i>
+      <h3>გუნდის მხარდაჭერა</h3>
+      <p>ჩვენი პროფესიონალი გუნდი მზად არის დაგეხმაროს ნებისმიერ ეტაპზე, 24/7.</p>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
     <script src="{% static 'js/driver.js' %}"></script>
 {% endblock %}

@@ -1,0 +1,98 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Noto Sans Georgian', sans-serif;
+    }
+    body {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .btn {
+      background: #007bff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 2rem;
+      background: #eef4ff;
+      text-align: center;
+    }
+    .hero-text {
+      max-width: 100%;
+    }
+    .hero-text h1 {
+      font-size: 2rem;
+      color: #007bff;
+      margin-bottom: 1rem;
+    }
+    .hero-text p {
+      margin-bottom: 1.5rem;
+    }
+    .hero-img {
+      width: 100%;
+      max-width: 500px;
+      height: 280px;
+      background: #ccc;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background: #fff;
+    }
+    .feature-card {
+      background: linear-gradient(145deg, #e6f0ff, #ffffff);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+    }
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+    }
+    .feature-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: #0056b3;
+    }
+    .feature-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #555;
+    }
+    .feature-card i {
+      font-size: 2rem;
+      color: #007bff;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    @media (min-width: 768px) {
+      .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+      .hero-text {
+        max-width: 50%;
+      }
+      .hero-img {
+        width: 40%;
+        margin-top: 0;
+      }
+    }
