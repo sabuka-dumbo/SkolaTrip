@@ -15,7 +15,7 @@ let btn2 = document.querySelector('.register2-form button');
 let lastBtn = document.getElementById('last-btn');
 
 // Prevent form submit on Enter key except in textarea
-document.querySelector('form').addEventListener('keydown', function (e) {
+document.getElementById('main-form').addEventListener('keydown', function (e) {
     if (e.key === 'Enter' && e.target.tagName.toLowerCase() !== 'textarea') {
         e.preventDefault();
     }
@@ -64,7 +64,7 @@ btn2.addEventListener('click', function () {
 lastBtn.addEventListener('click', function (e) {
     e.preventDefault();
     if (validateStep(form3)) {
-        // Submit the whole big form
-        document.querySelector('form').submit();
+        // Submit the whole big form by id
+        document.getElementById('main-form').submit();
     }
 });

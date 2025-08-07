@@ -18,7 +18,7 @@ Register
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
-    <form action="{% url 'classregister' %}" method="post">
+    <form id="main-form"  action="{% url 'classregister' %}" method="post">
         {% csrf_token %}
 
      <div class="steps-sec">
