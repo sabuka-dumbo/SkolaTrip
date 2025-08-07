@@ -18,6 +18,9 @@ Register
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
+    <form action="{% url 'classregister' %}" method="post">
+        {% csrf_token %}
+
      <div class="steps-sec">
     <div class="steps-div">
         <div class="step-circle" id="step-circle1"></div>
@@ -87,6 +90,8 @@ Register
     </div>
 
 </div>
+
+</form>
 
     <script src="{% static 'js/classregister.js' %}"></script>
 {% endblock %}
