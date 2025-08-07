@@ -76,6 +76,10 @@ def services(request):
 def blog(request):
     return render(request, "blogs.html")
 
+def hotel(request):
+    return render(request, "hotel.html")
+
+
 def classregister(request):
     if request.method == "POST":
         school_name = request.POST.get("school")
