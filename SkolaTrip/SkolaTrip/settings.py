@@ -74,14 +74,17 @@ WSGI_APPLICATION = 'SkolaTrip.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+from dotenv import load_dotenv 
+import  os
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'RHlQzsSxgCgCrZZfljIXqreNpCegdiag',
-        'HOST': 'postgresql://postgres:RHlQzsSxgCgCrZZfljIXqreNpCegdiag@gondola.proxy.rlwy.net:26323/railway',
-        'PORT': '5432',
+        'HOST': 'gondola.proxy.rlwy.net',  # ❗ Only the hostname here
+        'PORT': '26323',                   # ❗ Use the port from your connection URL
     }
 }
 
