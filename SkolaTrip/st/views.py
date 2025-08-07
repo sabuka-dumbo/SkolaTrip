@@ -91,6 +91,9 @@ def classregister(request):
         activities = request.POST.get("activities")
         comment = request.POST.get("comment")
 
+        print(f"Received data: {school_name}, {city}, {class_name}, {pupil_count}, {other_people_count}, {excursion_date}, {location}, {transportation}, {proboble_length}, {budget}, {food}, {activities}, {comment}")
+
+        return redirect("index")  # replace with your success URL
 
     else:
         return render(request, "classregister.html")
