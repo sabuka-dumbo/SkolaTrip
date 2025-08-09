@@ -18,7 +18,7 @@ h1{
 
 
 #main-img{
-    width: 80%;
+    width: 90%;
     height: 450px;
     background: #D9D9D9;
     border-radius: 8px;
@@ -91,21 +91,28 @@ h1{
 .img-1 {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  border-radius: 4px;
 }
 
 .img-2 {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  border-radius: 4px;
+
 }
 
 .img-3 {
   grid-column: 2 / 3;
   grid-row: 1 / 3;
+  border-radius: 4px;
+
 }
 
 .img-4 {
   grid-column: 1 / 3;
   grid-row: 3 / 4;
+  border-radius: 4px;
+
 }
 
 
@@ -123,7 +130,7 @@ h1{
 
     .amenities-card h2 {
       font-size: 28px;
-      margin-bottom: 28px;
+      margin-bottom: 30px;
       text-align: center;
       color: #222;
     }
@@ -188,11 +195,11 @@ h1{
       background: #ffffff;
       border-radius: 16px;
       box-shadow: 0 6px 20px rgba(0, 123, 255, 0.1);
-      padding: 30px 25px;
       flex: 1 1 280px;
       max-width: 320px;
       transition: transform 0.3s ease;
       text-align: center;
+      padding: 20px;
     }
 
     .contact-card:hover {
@@ -224,30 +231,33 @@ h1{
         text-align: center;
     }
 
-    @media (max-width: 768px) {
-      .contact-wrapper {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-
     /* responsive */
 @media (max-width: 480px) {
-    .amenities-card {
-        padding: 24px;
-    }
-    .amenities-grid {
-        grid-template-columns: 1fr;
-    }
-    .amenity{
-        margin: auto;
-    }
-    h2{
-        font-size: 1.4rem !important;
-    }
+  .contact-card {
+    padding: 25px 20px;
+  }
+
+  .contact-title {
+    font-size: 16px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+  }
+
+  .contact-icon {
+    font-size: 24px;
+  }
+
+  .contact-section h1 {
+    font-size: 22px;
+  }
+  .amenities-card h2{
+    font-size: 1.4rem;
+  }
 }
 
-     @media (max-width: 500px) {
+  @media (max-width: 500px) {
       .contact-card {
         padding: 25px 20px;
       }
@@ -298,9 +308,26 @@ h1{
   }
 
   .section-title {
-    font-size: 26p9282
+    font-size: 26px;
+  }
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contact-section {
+    padding: 60px 15px;
+  }
 
-   x;
+  .contact-section h1 {
+    font-size: 24px;
+  }
+
+  .contact-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 20px 0;
+    box-sizing: border-box;
   }
 }
 
@@ -316,3 +343,23 @@ h1{
         font-size: 1.3rem !important;
     }
 }
+
+@media (max-width:777px){
+  .amenities-card{
+    max-width: 500px;
+  }
+}
+ @media(max-width:339px){
+  .amenities-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+ }
+ 
+ @media(max-width:900px){
+  .head-div{
+    margin: auto;
+  }
+ }

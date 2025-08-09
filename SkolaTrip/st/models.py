@@ -76,3 +76,17 @@ class Driver_info(models.Model):
 
     def __str__(self):
         return f"{self.name} - {self.vehicle_type} ({self.vehicle_plate})"
+
+
+class Blog(models.Model):
+    title = models.CharField(max_length=255, default='')
+    content = models.TextField(default='')
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    reading_time = models.TextField(default='', blank=True, null=True)
+    small_description = models.TextField(default='', blank=True, null=True)
+    photo = models.ImageField(upload_to='blog_photos/', blank=True, null=True)
+
+    def __str__(self):
+        return self.title

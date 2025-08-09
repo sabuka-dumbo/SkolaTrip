@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+
+{% block head %}
+    <!-- აქ ვწერთ რაც იწერება head ტეგში -->
+    <link rel="stylesheet" href="{% static 'css/trip.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&display=swap" rel="stylesheet">
+{% endblock %}
+
+    <!-- ამის შიგნით ვწერთ რაც იწერება title ტეგში -->
+{% block title %}
+trip
+{% endblock %}
+
+{% block body %}
+    <!-- აქ ვწერთ რაც იწერება body ტეგში -->
+    <div class="container1">
+        <div class="item1">
+            <div class="item-icon-div">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill item-icon" viewBox="0 0 16 16">
+                    <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z"/>
+                </svg>
+            </div>
+
+            <div class="item-info">
+                <h1 class="item-info-title">Title here</h1>
+                <h1 class="item-info-description">Description here</h1>
+            </div>
+        </div>
+
+        <div class="item2">
+            <div class="item-icon-div">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill item-icon" viewBox="0 0 16 16">
+                    <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z"/>
+                </svg>
+            </div>
+
+            <div class="item-info">
+                <h1 class="item-info-title">Title here</h1>
+                <h1 class="item-info-description">Description here</h1>
+            </div>
+        </div>
+
+        <div class="item3">
+            <div class="item-icon-div">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-skip-start-fill item-icon" viewBox="0 0 16 16">
+                    <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z"/>
+                </svg>
+            </div>
+
+            <div class="item-info">
+                <h1 class="item-info-title">Title here</h1>
+                <h1 class="item-info-description">Description here</h1>
+            </div>
+        </div>
+    </div>
+      
+    <script src="{% static 'js/trip.js' %}"></script>
+{% endblock %}

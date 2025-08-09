@@ -83,6 +83,9 @@ def hotel(request):
 def driver(request):
     return render(request, "driver.html")
 
+def trip(request):
+    return render(request, "trip.html")
+
 def classregister(request):
     if request.method == "POST":
         school_name = request.POST.get("school")
