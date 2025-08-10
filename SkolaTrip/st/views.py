@@ -88,15 +88,16 @@ def trip(request):
 
 def classregister(request):
     if request.method == "POST":
-        school_name = request.POST.get("school")
+        # Get data from form
+        school = request.POST.get("school")
         city = request.POST.get("city")
-        class_name = request.POST.get("class")
-        pupil_count = request.POST.get("pupil_count")
-        other_people_count = request.POST.get("other_people_count")
+        destination = request.POST.get("destination")
+        excursion_type = request.POST.get("pupil_count")  # rename in HTML if needed
+        accommodation_type = request.POST.get("other_people_count")  # rename in HTML if needed
         excursion_date = request.POST.get("excursion_date")
-        location = request.POST.get("location")
+        approximate_age = request.POST.get("location")
         transportation = request.POST.get("transportation")
-        probable_length = request.POST.get("proboble_length")
+        probable_length = request.POST.get("proboble_length")  # fix spelling in HTML to probable_length
         budget = request.POST.get("budget")
         food = request.POST.get("food")
         activities = request.POST.get("activities")
@@ -104,13 +105,13 @@ def classregister(request):
 
         # Save to DB
         registration = ExcursionRegistration.objects.create(
-            school_name=school_name,
+            school=school,
             city=city,
-            class_name=class_name,
-            pupil_count=int(pupil_count),
-            other_people_count=int(other_people_count),
+            destination=destination,
+            excursion_type=excursion_type,
+            accommodation_type=accommodation_type,
             excursion_date=excursion_date,
-            location=location,
+            approximate_age=approximate_age,
             transportation=transportation,
             probable_length=probable_length,
             budget=budget,
@@ -118,9 +119,7 @@ def classregister(request):
             activities=activities,
             comment=comment,
         )
-        registration.save()
 
         return redirect("index")  # replace with your success URL
 
-    else:
-        return render(request, "classregister.html")
+    return render(request, "classregister.html")

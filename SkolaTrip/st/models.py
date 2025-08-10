@@ -24,25 +24,30 @@ class User(AbstractUser):
     )
 
 class ExcursionRegistration(models.Model):
-    school_name = models.CharField(max_length=255, default='')
-    city = models.CharField(max_length=255, default='')
-    class_name = models.CharField(max_length=100, default='')
-    pupil_count = models.PositiveIntegerField(default=0)
-    other_people_count = models.PositiveIntegerField(default=0)
-    excursion_date = models.DateField(default=timezone.now)
-    location = models.CharField(max_length=255, default='')
-    transportation = models.CharField(max_length=255, default='')
-    probable_length = models.CharField(max_length=100, default='')
-    budget = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
-    food = models.TextField(default='')
-    activities = models.TextField(default='')
-    comment = models.TextField(blank=True, null=True, default='')
+    # Part 1
+    school = models.CharField(max_length=255, default='', verbose_name="სახელი გვარი")
+    city = models.CharField(max_length=255, default='', verbose_name="მოგზაურობის დაწყების ადგილი")
+    destination = models.CharField(max_length=255, default='', verbose_name="სასურველი მოგზაურობის დასრულების ადგილი")
+    excursion_type = models.CharField(max_length=100, default='', verbose_name="ექსკურსიის ტიპი")
+    accommodation_type = models.CharField(max_length=100, default='', verbose_name="დარჩენის ტიპი")
+
+    # Part 2
+    excursion_date = models.DateField(default=timezone.now, verbose_name="სასურველი თარიღი")
+    approximate_age = models.CharField(max_length=100, default='', verbose_name="დაახლოებითი ასაკი")
+    transportation = models.CharField(max_length=255, default='', verbose_name="ტრანსპორტირების ტიპი")
+    probable_length = models.CharField(max_length=100, default='', verbose_name="სავარაუდო ხანგრძლივობა")
+
+    # Part 3
+    budget = models.DecimalField(max_digits=10, decimal_places=2, default=0.00, verbose_name="საშუალო ბიუჯეტი")
+    food = models.TextField(default='', verbose_name="კვების მოთხოვნები")
+    activities = models.TextField(default='', verbose_name="დამატებითი აქტივობები")
+    comment = models.TextField(blank=True, null=True, default='', verbose_name="კომენტარი")
 
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.school_name} - {self.class_name} excursion on {self.excursion_date}"
-
+        return f"{self.school} excursion to {self.destination} on {self.excursion_date}"
+    
 class Hotel(models.Model):
     name = models.CharField(max_length=255, default='')
     address = models.CharField(max_length=255, default='')
