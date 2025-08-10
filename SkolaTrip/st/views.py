@@ -89,7 +89,7 @@ def trip(request):
 def classregister(request):
     if request.method == "POST":
         # Get data from form
-        school = request.POST.get("school")  # სახელი გვარი
+        school = request.POST.get("name")  # სახელი გვარი
         city = request.POST.get("city")  # მოგზაურობის დაწყების ადგილი
         destination = request.POST.get("destination")  # მოგზაურობის დასრულების ადგილი
         excursion_type = request.POST.get("excursion_type")  # ექსკურსიის ტიპი
@@ -97,7 +97,7 @@ def classregister(request):
         excursion_date = request.POST.get("excursion_date")  # სასურველი თარიღი
         approximate_age = request.POST.get("approximate_age")  # დაახლოებითი ასაკი
         transportation = request.POST.get("transportation")  # ტრანსპორტირების ტიპი
-        probable_length = request.POST.get("probable_length")  # სავარაუდო ხანგრძლივობა
+        probable_length = request.POST.get("probable_length")
         budget = request.POST.get("budget")  # საშუალო ბიუჯეტი
         food = request.POST.get("food")  # კვების მოთხოვნები
         activities = request.POST.get("activities")  # დამატებითი აქტივობები
