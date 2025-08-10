@@ -407,3 +407,145 @@
     border: none;
     color: white;
 }
+
+/* --- Base Styles (your original code, with some tweaks) --- */
+.container1,
+.container2,
+.container3 {
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+}
+
+.item1, .item2, .item3, .item4, .item5, .container3 {
+    background: #fff;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+    animation: fadeInUp 0.7s cubic-bezier(.39,.575,.565,1) both;
+}
+
+.item1, .item2, .item3, .item4, .item5 {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .container3:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 32px 0 rgba(0,162,255,0.13);
+}
+
+.item6-button, .container3-button {
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    animation: popIn 0.6s cubic-bezier(.39,.575,.565,1) both;
+}
+.item6-button:hover, .container3-button:hover {
+    background: #0077b6;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Responsive Layouts --- */
+@media (max-width: 1200px) {
+    .container1 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    .item1, .item2, .item3 {
+        grid-column: auto;
+        width: 100%;
+    }
+    .container2 {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .item4, .item5 {
+        grid-column: auto;
+        width: 100%;
+    }
+}
+@media (max-width: 900px) {
+    .container1, .container2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .item1, .item2, .item3, .item4, .item5 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .container3 {
+        width: 100%;
+        left: 0;
+        padding: 10px;
+    }
+}
+@media (max-width: 600px) {
+    .container1, .container2, .container3 {
+        padding: 10px;
+        width: 100%;
+        left: 0;
+    }
+    .item1, .item2, .item3, .item4, .item5, .container3 {
+        padding: 10px;
+        font-size: 15px;
+    }
+    .item4-img, .item5-img, .container3-img {
+        width: 100px;
+        height: 100px;
+    }
+    .item-info-title, .item4-title, .item6-title, .container3-title {
+        font-size: 16px;
+    }
+    .item-info-description, .container3-description, .container3-package {
+        font-size: 13px;
+    }
+    .item6-button, .container3-button {
+        font-size: 16px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+}
+
+/* --- Scroll Animations --- */
+@media (prefers-reduced-motion: no-preference) {
+    .item1, .item2, .item3, .item4, .item5, .container3 {
+        will-change: transform, opacity;
+    }
+}
+
+/* --- Hide Scrollbars for Containers (optional) --- */
+.container1, .container2, .container3 {
+    scrollbar-width: thin;
+    scrollbar-color: #00A2FF #f0f0f0;
+}
+.container1::-webkit-scrollbar,
+.container2::-webkit-scrollbar,
+.container3::-webkit-scrollbar {
+    width: 6px;
+    background: #f0f0f0;
+}
+.container1::-webkit-scrollbar-thumb,
+.container2::-webkit-scrollbar-thumb,
+.container3::-webkit-scrollbar-thumb {
+    background: #00A2FF;
+    border-radius: 6px;
+}
+
+/* --- Keep your original styles below (if needed) --- */
+/* ...existing code... */
