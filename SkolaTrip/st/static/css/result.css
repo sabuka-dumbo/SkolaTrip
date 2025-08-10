@@ -1,5 +1,7 @@
 .head-div{
     width: 80%;
     height: 450px;
+    margin: auto;
     background:#00a2ff;
+    border-radius: 20px;
 }
