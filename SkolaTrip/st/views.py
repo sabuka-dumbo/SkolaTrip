@@ -89,22 +89,22 @@ def trip(request):
 def classregister(request):
     if request.method == "POST":
         # Get data from form
-        school = request.POST.get("school")
-        city = request.POST.get("city")
-        destination = request.POST.get("destination")
-        excursion_type = request.POST.get("pupil_count")  # rename in HTML if needed
-        accommodation_type = request.POST.get("other_people_count")  # rename in HTML if needed
-        excursion_date = request.POST.get("excursion_date")
-        approximate_age = request.POST.get("location")
-        transportation = request.POST.get("transportation")
-        probable_length = request.POST.get("proboble_length")  # fix spelling in HTML to probable_length
-        budget = request.POST.get("budget")
-        food = request.POST.get("food")
-        activities = request.POST.get("activities")
-        comment = request.POST.get("comment")
+        school = request.POST.get("school")  # სახელი გვარი
+        city = request.POST.get("city")  # მოგზაურობის დაწყების ადგილი
+        destination = request.POST.get("destination")  # მოგზაურობის დასრულების ადგილი
+        excursion_type = request.POST.get("excursion_type")  # ექსკურსიის ტიპი
+        accommodation_type = request.POST.get("accommodation_type")  # დარჩენის ტიპი
+        excursion_date = request.POST.get("excursion_date")  # სასურველი თარიღი
+        approximate_age = request.POST.get("approximate_age")  # დაახლოებითი ასაკი
+        transportation = request.POST.get("transportation")  # ტრანსპორტირების ტიპი
+        probable_length = request.POST.get("probable_length")  # სავარაუდო ხანგრძლივობა
+        budget = request.POST.get("budget")  # საშუალო ბიუჯეტი
+        food = request.POST.get("food")  # კვების მოთხოვნები
+        activities = request.POST.get("activities")  # დამატებითი აქტივობები
+        comment = request.POST.get("comment")  # კომენტარი
 
         # Save to DB
-        registration = ExcursionRegistration.objects.create(
+        ExcursionRegistration.objects.create(
             school=school,
             city=city,
             destination=destination,
@@ -120,6 +120,6 @@ def classregister(request):
             comment=comment,
         )
 
-        return redirect("index")  # replace with your success URL
+        return redirect("index")  # Replace with your success URL
 
     return render(request, "classregister.html")

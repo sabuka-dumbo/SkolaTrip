@@ -1,7 +1,6 @@
 {% extends 'layout.html' %}
 {% load static %}
 
-
 {% block head %}
     <!-- აქ ვწერთ რაც იწერება head ტეგში -->
     <meta charset="UTF-8">
@@ -11,7 +10,6 @@
     <script src="https://kit.fontawesome.com/06532b8c54.js" crossorigin="anonymous"></script>
 {% endblock %}
 
-    <!-- ამის შიგნით ვწერთ რაც იწერება title ტეგში -->
 {% block title %}
 Register
 {% endblock %}
@@ -40,47 +38,50 @@ Register
         </div>
     </div>
 
+    <!-- PART 1 -->
     <div class="container">
         <h1>ძირითადი ინფორმაცია:</h1>
         <div class="container-form">
             <label for="school">სახელი გვარი</label>
             <input type="text" id="school" name="school" required>
 
-            <label for="city">მოგზაურობის დაწყბის ადგილი</label>
+            <label for="city">მოგზაურობის დაწყების ადგილი</label>
             <input type="text" id="city" name="city" required>
 
-            <label for="class">სასურველი მოგზაურობის დასრულების ადგილი</label>
-            <input type="text" id="class" name="destination" required>
+            <label for="destination">სასურველი მოგზაურობის დასრულების ადგილი</label>
+            <input type="text" id="destination" name="destination" required>
 
-            <label for="pupil_count">ექსკურსიის ტიპი</label>
-            <input type="text" id="pupil_count" name="pupil_count" required min="1" max="200" step="1">
+            <label for="excursion_type">ექსკურსიის ტიპი</label>
+            <input type="text" id="excursion_type" name="excursion_type" required>
 
-            <label for="other_people_count">დარჩენის ტიპი</label>
-            <input type="text" id="other_people_count" name="other_people_count" required min="0" max="100" step="1">
+            <label for="accommodation_type">დარჩენის ტიპი</label>
+            <input type="text" id="accommodation_type" name="accommodation_type" required>
 
             <button id="submit" type="button">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
 
+    <!-- PART 2 -->
     <div class="register2">
         <h1>ექსკურსიის დეტალები:</h1>
         <div class="register2-form">
             <label for="date">სასურველი თარიღი</label>
             <input type="date" id="date" name="excursion_date" required>
 
-            <label for="location">დაახლოებითი ასაკი</label>
-            <input type="text" id="location" name="location" required>
+            <label for="approximate_age">დაახლოებითი ასაკი</label>
+            <input type="text" id="approximate_age" name="approximate_age" required>
 
             <label for="transport">ტრანსპორტირების ტიპი</label>
             <input type="text" id="transport" name="transportation" required>
 
             <label for="duration">ექსკურსიის სავარაუდო ხანგრძლივობა</label>
-            <input type="text" id="duration" name="proboble_length" required>
+            <input type="text" id="duration" name="probable_length" required>
 
             <button type="button">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
 
+    <!-- PART 3 -->
     <div class="register3">
         <h1>ბიუჯეტი:</h1>
         <div class="register3-form">
@@ -96,12 +97,11 @@ Register
             <label for="comment">კომენტარი</label>
             <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
 
-            <button id="last-btn" type="submit">შემდეგი <i class="fa-solid fa-arrow-right"></i></button>
+            <button id="last-btn" type="submit">დამატება <i class="fa-solid fa-arrow-right"></i></button>
         </div>
     </div>
 
 </form>
 
-
-    <script src="{% static 'js/classregister.js' %}"></script>
+<script src="{% static 'js/classregister.js' %}"></script>
 {% endblock %}
