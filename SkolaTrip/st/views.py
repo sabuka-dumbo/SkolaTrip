@@ -103,6 +103,10 @@ def classregister(request):
         activities1 = request.POST.get("activities")  # დამატებითი აქტივობები
         comment1 = request.POST.get("comment")  # კომენტარი
 
+        print(f"probable_length: '{probable_length1}'")
+        print(request.POST)
+
+
         # Save to DB
         ExcursionRegistration.objects.create(
             school=school1,
