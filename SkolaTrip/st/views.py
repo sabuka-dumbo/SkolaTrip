@@ -97,13 +97,13 @@ def classregister(request):
         excursion_date1 = request.POST.get("excursion_date")  # სასურველი თარიღი
         approximate_age1 = request.POST.get("approximate_age")  # დაახლოებითი ასაკი
         transportation1 = request.POST.get("transportation")  # ტრანსპორტირების ტიპი
-        probable_length1 = request.POST.get("probable_length")  # looks for correct spelling
+        xang = request.POST.get("xang")  # looks for correct spelling
         budget1 = request.POST.get("budget")  # საშუალო ბიუჯეტი
         food1 = request.POST.get("food")  # კვების მოთხოვნები
         activities1 = request.POST.get("activities")  # დამატებითი აქტივობები
         comment1 = request.POST.get("comment")  # კომენტარი
 
-        print(request.POST)
+        print(xang)
 
 
         # Save to DB
@@ -116,7 +116,7 @@ def classregister(request):
             excursion_date=excursion_date1,
             approximate_age=approximate_age1,
             transportation=transportation1,
-            probable_length=probable_length1,
+            probable_length=xang,
             budget=budget1,
             food=food1,
             activities=activities1,
