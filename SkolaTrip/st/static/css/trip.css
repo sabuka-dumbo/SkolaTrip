@@ -408,63 +408,88 @@
     color: white;
 }
 
-/* --- Base Styles (your original code, with some tweaks) --- */
-.container1,
-.container2,
-.container3 {
+/* --- Keep Animations, Improve Responsiveness --- */
+
+/* 1. Make grid layouts fully flexible and stack on small screens */
+.container1 {
+    position: relative;
+    top: 0;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+}
+
+.item1, .item2, .item3 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #656565;
+    display: grid;
+    border-radius: 11px;
+    grid-template-columns: 1fr 3fr;
     box-sizing: border-box;
-    transition: box-shadow 0.3s;
 }
 
-.item1, .item2, .item3, .item4, .item5, .container3 {
-    background: #fff;
-    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
-    animation: fadeInUp 0.7s cubic-bezier(.39,.575,.565,1) both;
+.container2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    padding: 20px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
 }
 
-.item1, .item2, .item3, .item4, .item5 {
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .container3:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 8px 32px 0 rgba(0,162,255,0.13);
-}
-
-.item6-button, .container3-button {
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    animation: popIn 0.6s cubic-bezier(.39,.575,.565,1) both;
-}
-.item6-button:hover, .container3-button:hover {
-    background: #0077b6;
-    transform: scale(1.05);
+.item4, .item5 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    padding: 20px;
+    margin: 0;
+    border: #656565 solid 1px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+    box-sizing: border-box;
 }
 
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes popIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+.item5 {
+    grid-template-columns: 1fr;
 }
 
-/* --- Responsive Layouts --- */
-@media (max-width: 1200px) {
+.container3 {
+    position: relative;
+    top: 0;
+    left: 20px;
+    height: max-content;
+    width: calc(100% - 80px);
+    padding: 20px;
+    margin: 0;
+    border: 1px solid #656565;
+    margin-top: 50px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+/* 2. Responsive breakpoints for tablets */
+@media (max-width: 1100px) {
     .container1 {
         grid-template-columns: 1fr 1fr 1fr;
+        left: 0;
+        width: 100%;
         gap: 20px;
     }
     .item1, .item2, .item3 {
@@ -474,78 +499,106 @@
     .container2 {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+        padding: 10px;
+        width: 100%;
     }
     .item4, .item5 {
         grid-column: auto;
         width: 100%;
     }
+    .container3 {
+        width: 100%;
+        left: 0;
+        padding: 15px;
+    }
 }
-@media (max-width: 900px) {
+
+/* 3. Responsive breakpoints for mobile */
+@media (max-width: 800px) {
     .container1, .container2 {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 16px;
+        padding: 8px;
+        width: 100%;
+        left: 0;
     }
     .item1, .item2, .item3, .item4, .item5 {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+        padding: 14px;
+        grid-template-columns: 1fr;
     }
     .container3 {
         width: 100%;
         left: 0;
         padding: 10px;
     }
-}
-@media (max-width: 600px) {
-    .container1, .container2, .container3 {
-        padding: 10px;
-        width: 100%;
-        left: 0;
-    }
-    .item1, .item2, .item3, .item4, .item5, .container3 {
-        padding: 10px;
-        font-size: 15px;
-    }
     .item4-img, .item5-img, .container3-img {
         width: 100px;
         height: 100px;
     }
+}
+
+/* 4. Extra small screens (phones) */
+@media (max-width: 500px) {
+    .container1, .container2, .container3 {
+        padding: 4px;
+        width: 100%;
+        left: 0;
+    }
+    .item1, .item2, .item3, .item4, .item5, .container3 {
+        padding: 8px;
+        font-size: 14px;
+    }
     .item-info-title, .item4-title, .item6-title, .container3-title {
-        font-size: 16px;
+        font-size: 15px;
     }
     .item-info-description, .container3-description, .container3-package {
-        font-size: 13px;
+        font-size: 12px;
     }
     .item6-button, .container3-button {
-        font-size: 16px;
-        padding-top: 7px;
-        padding-bottom: 7px;
+        font-size: 14px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .item4-img, .item5-img, .container3-img {
+        width: 70px;
+        height: 70px;
+    }
+    .container3-buttons {
+        flex-direction: column;
+        gap: 6px;
     }
 }
 
-/* --- Scroll Animations --- */
-@media (prefers-reduced-motion: no-preference) {
-    .item1, .item2, .item3, .item4, .item5, .container3 {
-        will-change: transform, opacity;
-    }
+/* 5. Make images and buttons always scale */
+.item4-img, .item5-img, .container3-img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
 }
 
-/* --- Hide Scrollbars for Containers (optional) --- */
-.container1, .container2, .container3 {
-    scrollbar-width: thin;
-    scrollbar-color: #00A2FF #f0f0f0;
-}
-.container1::-webkit-scrollbar,
-.container2::-webkit-scrollbar,
-.container3::-webkit-scrollbar {
-    width: 6px;
-    background: #f0f0f0;
-}
-.container1::-webkit-scrollbar-thumb,
-.container2::-webkit-scrollbar-thumb,
-.container3::-webkit-scrollbar-thumb {
-    background: #00A2FF;
-    border-radius: 6px;
+.item6-button, .container3-button {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 8px 0;
 }
 
-/* --- Keep your original styles below (if needed) --- */
-/* ...existing code... */
+/* 6. Flex for button groups */
+.container3-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* 7. Remove horizontal scroll on mobile */
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+/* 8. Keep your animations and scrollbar styles as before */
+/* ...existing code for animations and scrollbars... */
