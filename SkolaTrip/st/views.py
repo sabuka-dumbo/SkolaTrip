@@ -29,12 +29,6 @@ def login_view(request):
 
     return render(request, "login.html")
 
-def changetrip(request):
-    if request.method == "POST":
-        # Handle the form submission for changing the trip
-        pass
-    return render(request, "changetrip.html")
-
 def register_view(request):
     if request.method == "POST":
         full_name = request.POST.get("full_name")
