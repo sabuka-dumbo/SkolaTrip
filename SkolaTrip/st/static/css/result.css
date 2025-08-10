@@ -33,7 +33,10 @@ p {
 .img-div{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+}
+
+.route-sec{
+    margin: 20px;
 }
 
 .img-div img{
