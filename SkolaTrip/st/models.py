@@ -24,29 +24,24 @@ class User(AbstractUser):
     )
 
 class ExcursionRegistration(models.Model):
-    # Part 1: ძირითადი ინფორმაცია
-    school_name = models.CharField("სახელი გვარი", max_length=255, default='')  # Name and surname
-    city = models.CharField("მოგზაურობის დაწყების ადგილი", max_length=255, default='')  # Start location
-    class_name = models.CharField("სასურველი მოგზაურობის დასრულების ადგილი", max_length=100, default='')  # End location
-    pupil_count = models.PositiveIntegerField("ექსკურსიის ტიპი", default=0)  # Excursion type (number)
-    other_people_count = models.PositiveIntegerField("დარჩენის ტიპი", default=0)  # Stay type (number)
-
-    # Part 2: ექსკურსიის დეტალები
-    excursion_date = models.DateField("სასურველი თარიღი", default=timezone.now)
-    location = models.CharField("დაახლოებითი ასაკი", max_length=255, default='')  # Approximate age
-    transportation = models.CharField("ტრანსპორტირების ტიპი", max_length=255, default='')
-    probable_length = models.CharField("ექსკურსიის სავარაუდო ხანგრძლივობა", max_length=100, default='')
-
-    # Part 3: ბიუჯეტი
-    budget = models.DecimalField("საშუალო ბიუჯეტი", max_digits=10, decimal_places=2, default=0.00)
-    food = models.TextField("კვების მოთხოვნები", default='')
-    activities = models.TextField("დამატებითი აქტივობები", default='')
-    comment = models.TextField("კომენტარი", blank=True, null=True, default='')
+    school_name = models.CharField(max_length=255, default='')
+    city = models.CharField(max_length=255, default='')
+    class_name = models.CharField(max_length=100, default='')
+    pupil_count = models.PositiveIntegerField(default=0)
+    other_people_count = models.PositiveIntegerField(default=0)
+    excursion_date = models.DateField(default=timezone.now)
+    location = models.CharField(max_length=255, default='')
+    transportation = models.CharField(max_length=255, default='')
+    probable_length = models.CharField(max_length=100, default='')
+    budget = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    food = models.TextField(default='')
+    activities = models.TextField(default='')
+    comment = models.TextField(blank=True, null=True, default='')
 
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.school_name} | {self.city} → {self.class_name} | {self.excursion_date}"
+        return f"{self.school_name} - {self.class_name} excursion on {self.excursion_date}"
 
 class Hotel(models.Model):
     name = models.CharField(max_length=255, default='')
