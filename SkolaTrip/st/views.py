@@ -89,35 +89,35 @@ def trip(request):
 def classregister(request):
     if request.method == "POST":
         # Get data from form
-        school = request.POST.get("name")  # სახელი გვარი
-        city = request.POST.get("city")  # მოგზაურობის დაწყების ადგილი
-        destination = request.POST.get("destination")  # მოგზაურობის დასრულების ადგილი
-        excursion_type = request.POST.get("excursion_type")  # ექსკურსიის ტიპი
-        accommodation_type = request.POST.get("accommodation_type")  # დარჩენის ტიპი
-        excursion_date = request.POST.get("excursion_date")  # სასურველი თარიღი
-        approximate_age = request.POST.get("approximate_age")  # დაახლოებითი ასაკი
-        transportation = request.POST.get("transportation")  # ტრანსპორტირების ტიპი
-        probable_length = request.POST.get("probable_length")
-        budget = request.POST.get("budget")  # საშუალო ბიუჯეტი
-        food = request.POST.get("food")  # კვების მოთხოვნები
-        activities = request.POST.get("activities")  # დამატებითი აქტივობები
-        comment = request.POST.get("comment")  # კომენტარი
+        school1 = request.POST.get("name")  # სახელი გვარი
+        city1 = request.POST.get("city")  # მოგზაურობის დაწყების ადგილი
+        destination1 = request.POST.get("destination")  # მოგზაურობის დასრულების ადგილი
+        excursion_type1 = request.POST.get("excursion_type")  # ექსკურსიის ტიპი
+        accommodation_type1 = request.POST.get("accommodation_type")  # დარჩენის ტიპი
+        excursion_date1 = request.POST.get("excursion_date")  # სასურველი თარიღი
+        approximate_age1 = request.POST.get("approximate_age")  # დაახლოებითი ასაკი
+        transportation1 = request.POST.get("transportation")  # ტრანსპორტირების ტიპი
+        probable_length1 = request.POST.get("probable_length")
+        budget1 = request.POST.get("budget")  # საშუალო ბიუჯეტი
+        food1 = request.POST.get("food")  # კვების მოთხოვნები
+        activities1 = request.POST.get("activities")  # დამატებითი აქტივობები
+        comment1 = request.POST.get("comment")  # კომენტარი
 
         # Save to DB
         ExcursionRegistration.objects.create(
-            school=school,
-            city=city,
-            destination=destination,
-            excursion_type=excursion_type,
-            accommodation_type=accommodation_type,
-            excursion_date=excursion_date,
-            approximate_age=approximate_age,
-            transportation=transportation,
-            probable_length=probable_length,
-            budget=budget,
-            food=food,
-            activities=activities,
-            comment=comment,
+            school=school1,
+            city=city1,
+            destination=destination1,
+            excursion_type=excursion_type1,
+            accommodation_type=accommodation_type1,
+            excursion_date=excursion_date1,
+            approximate_age=approximate_age1,
+            transportation=transportation1,
+            probable_length=probable_length1,
+            budget=budget1,
+            food=food1,
+            activities=activities1,
+            comment=comment1,
         )
 
         return redirect("index")  # Replace with your success URL
