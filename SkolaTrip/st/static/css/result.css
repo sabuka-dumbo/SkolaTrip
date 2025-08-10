@@ -33,7 +33,10 @@ p {
 .img-div{
     display: flex;
     justify-content: center;
+    gap:10px;
 }
+
+
 
 .route-sec{
     margin-top:150px;
@@ -47,7 +50,7 @@ p {
 }
 
 h2{
-    padding-left: 155px;
+    padding-left: 140px;
 }
 
 @keyframes fadeIn {
