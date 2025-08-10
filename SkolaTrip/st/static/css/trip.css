@@ -423,6 +423,7 @@
 
     .item1, .item2, .item3 {
         grid-column: 1;
+        margin-bottom: 10px;
     }
 }
 
@@ -447,8 +448,12 @@
         border-top-right-radius: 15px;
     }
 
-    .item5 {
-        margin-bottom: 10px;
+    .item4 {
+        margin-top: 80px;
+    }
+
+    .container3 {
+        margin-top: 140px;
     }
 }
 
