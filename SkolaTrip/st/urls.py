@@ -12,4 +12,5 @@ urlpatterns = [
     path('hotel/', views.hotel, name="hotel"),
     path('driver/', views.driver, name="driver"),
     path('trip/', views.trip, name="trip"),
+    path('results/', views.results, name="results"),
 ]

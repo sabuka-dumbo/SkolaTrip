@@ -86,6 +86,9 @@ def driver(request):
 def trip(request):
     return render(request, "trip.html")
 
+def results(request):
+    return render(request, "results.html")
+
 def classregister(request):
     if request.method == "POST":
         # Get data from form
