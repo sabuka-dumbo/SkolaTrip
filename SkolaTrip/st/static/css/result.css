@@ -1,3 +1,6 @@
+body{
+    font-family: 'Noto Sans Georgian', sans-serif;
+}
 .head-div {
     width: 70%;
     height: 500px;
@@ -11,7 +14,7 @@
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease-out;
-    gap:5px;
+    gap:10px;
 }
 
 h1 {
@@ -21,7 +24,7 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
-p {
+.head-div p {
     color: rgb(230, 226, 226);
     font-size: 1.1rem;
     margin-top: 10px;
@@ -30,28 +33,199 @@ p {
     animation: fadeIn 1.5s ease-out 0.5s forwards;
 }
 
-.img-div{
+.route-sec {
+    margin-top: 150px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    line-height: 1.2;
+}
+
+.card-section {
+    text-align: center;
+    padding: 40px 10px;
+    background-color: #fff;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap:10px;
+    gap: 20px;
 }
 
-
-
-.route-sec{
-    margin-top:150px;
-}
-
-.img-div img{
+.card {
+    position: relative;
     width: 320px;
-    height: 320px;
-    background: #D9D9D9;
-    object-fit: cover;
+    height: 390px;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #adadad;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-h2{
-    padding-left: 140px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 15px;
+    background: white;
+}
+
+.card-content b {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00A2FF;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #007bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Single card per row on small screens */
+    }
+}
+
+/* Add media query to handle small screens */
+@media (max-width: 768px) {
+    .img-container {
+        width: 45%;  /* Two items per row */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .img-container {
+        width: 100%;  /* One item per row */
+    }
+
+    h2 {
+        font-size: 1.5rem;  /* Adjust header font size */
+    }
+
+    .info button {
+        font-size: 0.9rem;  /* Slightly smaller button text */
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+        padding-left: 0;
+    }
+
+    .img-div {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .img-container {
+        width: 100%; /* Take up full width */
+        height: auto;
+    }
+
+    .info {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .info button {
+        width: 100%;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.6rem; /* Smaller font size for very small screens */
+    }
+
+    .img-container {
+        width: 100%; /* Full-width images */
+        height: 250px; /* Adjust image height */
+    }
+
+    .info {
+        padding: 10px;
+    }
+
+    .info button {
+        font-size: 0.85rem; /* Smaller button size */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
 
 
 
