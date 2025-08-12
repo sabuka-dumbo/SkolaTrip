@@ -89,6 +89,9 @@ def trip(request):
 def results(request):
     return render(request, "results.html")
 
+def thetrip(request):
+    return render(request, "thetrip.html")
+
 def classregister(request):
     if request.method == "POST":
         # Get data from form
