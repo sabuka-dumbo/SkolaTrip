@@ -14,79 +14,81 @@
 
 {% block body %}
     <!-- აქ ვწერთ რაც იწერება body ტეგში -->
-      <div class="head-div">
-     <h1>სასტუმროს სახელი</h1>
-     <p>სასტუმროს სლოგანი</p>
-     <img id="main-img">
-     </div>
+<section class="pricing-section">
+  <h2 class="section-title">მარშრუტის სერვისი</h2>
+  <p class="section-subtitle">შეარჩიე პაკეტი რომელიც დაგეხმარება სწორად დაგეგმო ფასიანი მარშრუტები</p>
+
+  <div class="pricing-grid">
+    <div class="pricing-card">
+      <div class="circle-icon"></div>
+      <h3>ერთჯერადი პაკეტი</h3>
+      <ul>
+        <li>მარშრუტი 1</li>
+        <li>მარშრუტი 2</li>
+        <li>მარშრუტი 3</li>
+      </ul>
+      <button class="buy-btn">შეძენა</button>
+    </div>
+
+    <div class="pricing-card featured">
+      <div class="circle-icon"></div>
+      <h3>ერთჯერადი პაკეტი 2</h3>
+      <ul>
+        <li>მარშრუტი 1</li>
+        <li>მარშრუტი 2</li>
+        <li>მარშრუტი 3</li>
+        <li>მარშრუტი 4</li>
+        <li>მარშრუტი 5</li>
+      </ul>
+      <button class="buy-btn">შეძენა</button>
+    </div>
+
+    <div class="pricing-card">
+      <div class="circle-icon"></div>
+      <h3>მრავალჯერადი პაკეტი</h3>
+      <ul>
+        <li>მარშრუტი 1</li>
+        <li>მარშრუტი 2</li>
+        <li>მარშრუტი 3</li>
+        <li>მარშრუტი 4</li>
+        <li>მარშრუტი 5</li>
+        <li>მარშრუტი 6</li>
+        <li>მარშრუტი 7</li>
+      </ul>
+      <button class="buy-btn">შეძენა</button>
+    </div>
+  </div>
+</section>
+
 <div class="services-section">
-  
+   <h2>რას დაათვალიერებთ?</h2> 
   <div class="card-container">
-    
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="icon" width="60" />
-      <h5>გიდი</h5>
-      <p>პროფესიონალი გიდები, რომლებიც გაგაცნობენ ქვეყანას.</p>
+      <div class="circle"></div>
+      <h3>ნაწილი 1</h3>
+      <p>ნაწილი 1-ს ახსნა </p>
     </div>
-
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/201/201623.png" alt="icon" width="60" />
-      <h5>ტრანსპორტირება</h5>
-      <p>კომფორტული მიკროავტობუსებითა და მძღოლებით ყველგან იმოგზაურებთ.</p>
+      <div class="circle"></div>
+      <h3>ნაწილი 2</h3>
+      <p>ნაწილი 2-ს ახსნა</p>
     </div>
-
     <div class="card">
-      <img src="https://cdn-icons-png.flaticon.com/512/235/235861.png" alt="icon" width="60" />
-      <h5>საცხოვრებელი</h5>
-      <p>თანამშრომლობითი სასტუმროები და ოჯახური ტიპის განთავსება.</p>
+      <div class="circle"></div>
+      <h3>ნაწილი 3</h3>
+      <p>ნაწილი 3-ს ახსნა</p>
     </div>
   </div>
 </div>
 
-<section class="imgs-sec">
-  <div class="img-box img-1"></div>
-  <div class="img-box img-2"></div>
-  <div class="img-box img-3"></div>
-  <div class="img-box img-4"></div>
-</section>
-
-<section class="amenitites">
-    <div class="amenities-card">
-    <h2>დამატებითი დეტალები:</h2>
-    <div class="amenities-grid">
-      <div class="amenity"><i class="fas fa-wifi"></i><span>Wi-Fi</span></div>
-      <div class="amenity"><i class="fas fa-swimmer"></i><span>აუზი</span></div>
-      <div class="amenity"><i class="fas fa-spa"></i><span>სპა & მასაჟი</span></div>
-      <div class="amenity"><i class="fas fa-concierge-bell"></i><span>ოთახის სერვისი</span></div>
-      <div class="amenity"><i class="fas fa-snowflake"></i><span>კონდიციონერი</span></div>
-      <div class="amenity"><i class="fas fa-square-parking"></i><span>პარკინგი</span></div>
-      <div class="amenity"><i class="fas fa-water"></i><span>ზღვის ხედი</span></div>
-      <div class="amenity"><i class="fas fa-utensils"></i><span>3-ჯერადი კვება</span></div>
-
-    </div>
-  </div>
+<section class="asym-grid">
+  <div class="box box-1"></div>
+  <div class="box box-2"></div>
+  <div class="box box-3"></div>
+  <div class="box box-4"></div>
+  <div class="box box-5"></div>
 </section>
 
 
-<section class="contact-section">
-  <h1>მძღოლთან დაკავშირება</h1>
-    <div class="contact-wrapper">
-      <div class="contact-card">
-        <div class="contact-icon">📞</div>
-        <div class="contact-title">ტელეფონის ნომერი</div>
-        <div class="contact-info">+955 XXX XXX XXX</div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-icon">📧</div>
-        <div class="contact-title">ელ-ფოსტა</div>
-        <div class="contact-info">info@example.com</div>
-      </div>
-      <div class="contact-card">
-        <div class="contact-icon">📍</div>
-        <div class="contact-title">მისამართი</div>
-        <div class="contact-info">რავიცის 21<br>ბათუმი, აჭარა</div>
-      </div>
-    </div>
-  </section>
     <script src="{% static 'js/thetrip.js' %}"></script>
 {% endblock %}
